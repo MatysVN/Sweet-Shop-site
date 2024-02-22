@@ -25,8 +25,9 @@ html {
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 1.6rem;
+	background-color: $light-white;
 }
 
 .wrapper {
@@ -39,7 +40,11 @@ body {
 //Navigation
 //---
 .nav {
-	position: relative;
+	position: sticky;
+	top: 0px;
+	border-bottom: 1px solid $dark;
+	background-color: $light-white;
+	z-index: 20;
 	.hamburger {
 		position: absolute;
 		top: 3em;
@@ -50,6 +55,32 @@ body {
 		&-inner::after,
 		&-inner::before {
 			background-color: $light-white;
+		}
+	}
+	&__desktop {
+		display: none;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1em 1em;
+		
+		a {
+			padding: 10px;
+			color: $dark;
+			text-decoration: none;
+			transition: color .3s;
+		}
+		&-title {
+			font-family: "Dancing Script", cursive;
+			font-weight: 600;
+			font-size: 3rem;
+			
+		}
+		.nav__desktop-navbar {
+			font-size: 1.8rem;
+			a:hover {
+				color: $main-color;
+			}
 		}
 	}
 }

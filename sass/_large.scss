@@ -1,4 +1,16 @@
 @media (min-width: 992px) {
+
+    .nav {
+        .nav__desktop {
+            .nav__desktop-title {
+                font-weight: 800;
+                font-size: 3.5rem;
+            }
+            .nav__desktop-navbar {
+                font-size: 2rem;
+            }
+        }
+    }
     .header {
         &__text-box {
            .title {

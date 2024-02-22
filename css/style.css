@@ -107,8 +107,8 @@
 }
 
 @media (min-width: 576px) {
-  .nav .hamburger {
-    display: none;
+  .nav {
+    position: relative;
   }
   .header__text-box .title {
     font-size: 8rem !important;
@@ -118,6 +118,15 @@
   }
 }
 @media (min-width: 768px) {
+  .nav {
+    padding: 1px;
+  }
+  .nav .hamburger {
+    display: none;
+  }
+  .nav .nav__desktop {
+    display: flex;
+  }
   .header__text-box .title {
     font-size: 10rem !important;
   }
@@ -126,6 +135,13 @@
   }
 }
 @media (min-width: 992px) {
+  .nav .nav__desktop .nav__desktop-title {
+    font-weight: 800;
+    font-size: 3.5rem;
+  }
+  .nav .nav__desktop .nav__desktop-navbar {
+    font-size: 2rem;
+  }
   .header__text-box .title {
     font-size: 12rem !important;
   }
@@ -147,8 +163,9 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #eee;
 }
 
 .wrapper {
@@ -158,7 +175,11 @@ body {
 }
 
 .nav {
-  position: relative;
+  position: sticky;
+  top: 0px;
+  border-bottom: 1px solid #2e2e2e;
+  background-color: #eee;
+  z-index: 20;
 }
 .nav .hamburger {
   position: absolute;
@@ -169,6 +190,30 @@ body {
 }
 .nav .hamburger-inner, .nav .hamburger-inner::after, .nav .hamburger-inner::before {
   background-color: #eee;
+}
+.nav__desktop {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 1em;
+}
+.nav__desktop a {
+  padding: 10px;
+  color: #2e2e2e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav__desktop-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 3rem;
+}
+.nav__desktop .nav__desktop-navbar {
+  font-size: 1.8rem;
+}
+.nav__desktop .nav__desktop-navbar a:hover {
+  color: #D18A48;
 }
 
 .header {

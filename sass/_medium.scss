@@ -1,4 +1,15 @@
 @media (min-width: 768px) {
+
+    .nav {
+        padding: 1px;
+        .hamburger {
+			display: none;
+		}
+        .nav__desktop {
+            display: flex;
+        }
+    }
+
     .header {
         &__text-box {
            .title {
