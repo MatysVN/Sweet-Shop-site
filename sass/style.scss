@@ -1,5 +1,15 @@
-@use './colors' as *;
-@use './burgericon' as *;
+@use "./colors" as *;
+@use "./burgericon" as *;
+@use "./small" as *;
+@use "./medium" as *;
+@use "./large" as *;
+
+@mixin heroImages($bgImg) {
+	background-image: url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
 
 *,
 *::after,
@@ -25,6 +35,66 @@ body {
 	max-width: 1200px;
 }
 
+//---
+//Navigation
+//---
+.nav {
+	position: relative;
+	.hamburger {
+		position: absolute;
+		top: 3em;
+		left: 1em;
+		transform: translateY(-50%);
+		z-index: 20;
+		&-inner,
+		&-inner::after,
+		&-inner::before {
+			background-color: $light-white;
+		}
+	}
+}
+
 // ---
 // Header
 // ---
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	@include heroImages("../img/main.jpg");
+	background-attachment: scroll;
+	z-index: 0;
+	&__img-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: $header-shadow;
+		z-index: 2;
+	}
+	&__text-box {
+		color: $light-white;
+		font-family: "Dancing Script", cursive;
+		text-align: center;
+		z-index: 3;
+		.title {
+			font-size: 6rem;
+			font-weight: 300;
+		}
+		.text {
+			font-size: 3rem;
+		}
+	}
+	&__arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 1em;
+		font-size: 3em;
+		color: $light-white;
+		z-index: 3;
+	}
+}
+//Breakpoints

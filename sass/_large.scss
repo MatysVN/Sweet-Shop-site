@@ -1,0 +1,12 @@
+@media (min-width: 992px) {
+    .header {
+        &__text-box {
+           .title {
+                font-size: 12rem !important;
+            }
+            .text {
+                font-size: 5rem !important;
+            }
+        }
+    }
+}

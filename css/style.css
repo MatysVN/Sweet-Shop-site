@@ -1,3 +1,138 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #ffffff;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (min-width: 576px) {
+  .nav .hamburger {
+    display: none;
+  }
+  .header__text-box .title {
+    font-size: 8rem !important;
+  }
+  .header__text-box .text {
+    font-size: 3rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .header__text-box .title {
+    font-size: 10rem !important;
+  }
+  .header__text-box .text {
+    font-size: 4rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .header__text-box .title {
+    font-size: 12rem !important;
+  }
+  .header__text-box .text {
+    font-size: 5rem !important;
+  }
+}
 *,
 *::after,
 *::before {
@@ -20,4 +155,62 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+}
+
+.nav {
+  position: relative;
+}
+.nav .hamburger {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+.nav .hamburger-inner, .nav .hamburger-inner::after, .nav .hamburger-inner::before {
+  background-color: #eee;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+  z-index: 0;
+}
+.header__img-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsla(29, 57%, 7%, 0.603);
+  z-index: 2;
+}
+.header__text-box {
+  color: #eee;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  z-index: 3;
+}
+.header__text-box .title {
+  font-size: 6rem;
+  font-weight: 300;
+}
+.header__text-box .text {
+  font-size: 3rem;
+}
+.header__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+  font-size: 3em;
+  color: #eee;
+  z-index: 3;
 }/*# sourceMappingURL=style.css.map */
