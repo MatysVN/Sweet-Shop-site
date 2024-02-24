@@ -8,31 +8,40 @@
     <script src="https://kit.fontawesome.com/4947ad24af.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- nav -->
+    <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
     <nav class="nav">
-        <button class="hamburger hamburger--spin" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
+        <div class="nav__mobile ">
+            <div class="nav__items">
+                <a href="#" class="nav__item">Strona Główna</a>
+                <a href="#aboutus" class="nav__item">O nas</a>
+                <a href="#offers" class="nav__item">Nasza Oferta</a>
+                <a href="#contact" class="nav__item">Kontakt</a>
+            </div>
+        </div>
         <div class="wrapper">
             <div class="nav__desktop">
-                <div class="nav__desktop-title"><a href="#">Słodka Pasja</a></div>
-                <div class="nav__desktop-navbar">
-    
-                    <a href="#">Strona Główna</a>
-                    <a href="#aboutus">O nas</a>
-                    <a href="#products">Nasza oferta</a>
-                    <a href="#contact">Kontakt</a>
+                <div class="nav__desktop-title"><a href="#" class="nav-logo">Słodka<span>Pasja</span></a></div>
+                <div class="nav__items">
+                    <a href="#" class="nav__item">Strona Główna</a>
+                    <a href="#aboutus" class="nav__item">O nas</a>
+                    <a href="#offers" class="nav__item">Nasza Oferta</a>
+                    <a href="#contact" class="nav__item">Kontakt</a>
                 </div>
             </div>
         </div>
-       
+
     </nav>
 
     <!-- header -->
@@ -44,8 +53,9 @@
             <h1 class="title">Słodka Pasja</h1>
             <p class="text">wypełnij życie smakiem</p>
         </div>
-        <div class="header__arrow">
-            <i class="fa-solid fa-chevron-down"></i>
+        <a href="#introduction" class="header__arrow"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+        
+           
         </div>
 
     </header>

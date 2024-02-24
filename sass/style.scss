@@ -1,8 +1,6 @@
 @use "./colors" as *;
 @use "./burgericon" as *;
-@use "./small" as *;
-@use "./medium" as *;
-@use "./large" as *;
+@use "./animations" as *;
 
 @mixin heroImages($bgImg) {
 	background-image: url($bgImg);
@@ -33,71 +31,159 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1400px;
 }
 
+//Elementy wjeżdzają z boku
+@keyframes navItemAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
 //---
 //Navigation
 //---
+.hamburger {
+	position: absolute;
+	top: 3em;
+	right: 1em;
+	transform: translateY(-50%);
+	z-index: 200;
+	&-inner,
+	&-inner::after,
+	&-inner::before {
+		background-color: $light-white;
+	}
+}
 .nav {
 	position: sticky;
 	top: 0px;
-	border-bottom: 1px solid $dark;
 	background-color: $light-white;
 	z-index: 20;
-	.hamburger {
+	transform: translateX(101%);
+	transition: transform 0.5s;
+	.nav__mobile {
 		position: absolute;
-		top: 3em;
-		left: 1em;
-		transform: translateY(-50%);
-		z-index: 20;
-		&-inner,
-		&-inner::after,
-		&-inner::before {
-			background-color: $light-white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-color: $light-white;
+
+		.nav__items {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			.nav__item {
+				position: relative;
+				display: block;
+				margin: 0.5em 0;
+				padding: 0.5em 1em;
+				font-size: 2rem;
+				color: $dark;
+				text-decoration: none;
+				transition: color 0.3s;
+				&:hover {
+					color: $main-color;
+				}
+				&::before {
+					position: absolute;
+					bottom: 5px;
+					left: 0%;
+					content: "";
+					width: 2px;
+					height: 100%;
+					background-color: $main-color;
+					transform: scaleY(0);
+					transition: transform 0.2s linear;
+				}
+				&:hover::before {
+					transform: scaleY(1);
+				}
+			}
 		}
 	}
-	&__desktop {
+
+	.nav__desktop {
 		display: none;
 		flex-direction: row;
-		align-items: center;
 		justify-content: space-between;
-		margin: 1em 1em;
-		
-		a {
-			padding: 10px;
-			color: $dark;
-			text-decoration: none;
-			transition: color .3s;
+		.nav__desktop-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.nav-logo {
+				margin: 0 10px;
+				padding: 5px 15px;
+				font-family: "Dancing Script", cursive;
+				font-size: 4rem;
+				text-decoration: none;
+				color: $dark;
+				span {
+					color: $main-color;
+				}
+			}
 		}
-		&-title {
-			font-family: "Dancing Script", cursive;
-			font-weight: 600;
-			font-size: 3rem;
-			
-		}
-		.nav__desktop-navbar {
-			font-size: 1.8rem;
-			a:hover {
-				color: $main-color;
+		.nav__items {
+			display: flex;
+			justify-content: center;
+			align-items: end;
+
+			.nav__item {
+				position: relative;
+				display: block;
+				margin: 0.5em 0;
+				padding: 0.5em 1em;
+				font-size: 2rem;
+				color: $dark;
+				text-decoration: none;
+				transition: color 0.3s;
+				&:hover {
+					color: $main-color;
+				}
+
+				&::before {
+					position: absolute;
+					bottom: 5px;
+					left: 15%;
+					content: "";
+					width: 70%;
+					height: 2px;
+					background-color: $main-color;
+					transform: scale(0);
+					transition: transform 0.2s linear;
+				}
+				&:hover::before {
+					transform: scaleX(1);
+				}
 			}
 		}
 	}
 }
-
+.nav__mobile-active {
+	transform: translateX(0);
+}
 // ---
 // Header
 // ---
 .header {
-	position: relative;
+	position: absolute;
+	top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	width: 100%;
 	@include heroImages("../img/main.jpg");
 	background-attachment: scroll;
 	z-index: 0;
-	&__img-shadow {
+	overflow: hidden;
+	.header__img-shadow {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -106,7 +192,7 @@ body {
 		background-color: $header-shadow;
 		z-index: 2;
 	}
-	&__text-box {
+	.header__text-box {
 		color: $light-white;
 		font-family: "Dancing Script", cursive;
 		text-align: center;
@@ -122,10 +208,94 @@ body {
 	&__arrow {
 		position: absolute;
 		left: 50%;
-		bottom: 1em;
-		font-size: 3em;
+		bottom: 10px;
+		transform: translateX(-50%);
+		font-size: 1.5em;
 		color: $light-white;
+		text-decoration: none;
 		z-index: 3;
 	}
 }
 //Breakpoints
+
+//small
+@media (min-width: 576px) {
+	.header {
+		.header__text-box {
+			.title {
+				font-size: 8rem;
+			}
+			.text {
+				font-size: 3rem;
+			}
+		}
+		.header__arrow {
+			font-size: 2em;
+		}
+	}
+}
+
+//medium
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+	.nav {
+		padding: 1px;
+		border-bottom: 1px solid $dark;
+		transform: translateX(0%);
+		transition: transform 0s;
+		.nav__mobile {
+			display: none;
+		}
+		.nav__desktop {
+			display: flex;
+		}
+	}
+
+	.header {
+		&__text-box {
+			.title {
+				font-size: 10rem !important;
+			}
+			.text {
+				font-size: 4rem !important;
+			}
+		}
+	}
+}
+
+//large
+@media (min-width: 992px) {
+	.nav {
+		padding: 1px;
+		border-bottom: 1px solid $dark;
+		.hamburger {
+			display: none;
+		}
+		.nav__desktop {
+			display: flex;
+			.nav__desktop-title {
+				.nav-logo {
+					font-size: 5rem;
+				}
+			}
+			.nav__items {
+				.nav__item {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
+
+	.header {
+		&__text-box {
+			.title {
+				font-size: 12rem !important;
+			}
+			.text {
+				font-size: 5rem !important;
+			}
+		}
+	}
+}
