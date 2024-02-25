@@ -155,6 +155,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 html {
@@ -174,6 +175,10 @@ body {
   max-width: 1400px;
 }
 
+.scroll-block {
+  overflow: hidden;
+}
+
 @keyframes navItemAnimation {
   from {
     transform: translateX(200%);
@@ -182,14 +187,17 @@ body {
     transform: translateX(0%);
   }
 }
-.hamburger {
-  position: absolute;
-  top: 3em;
+.hamburger-box {
+  position: fixed;
+  top: 1em;
   right: 1em;
-  transform: translateY(-50%);
   z-index: 200;
 }
-.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+.hamburger-box .hamburger {
+  position: sticky;
+  z-index: 200;
+}
+.hamburger-box .hamburger-inner, .hamburger-box .hamburger-inner::after, .hamburger-box .hamburger-inner::before {
   background-color: #eee;
 }
 
@@ -257,7 +265,7 @@ body {
   margin: 0 10px;
   padding: 5px 15px;
   font-family: "Dancing Script", cursive;
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-decoration: none;
   color: #2e2e2e;
 }
@@ -274,7 +282,7 @@ body {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 1em;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #2e2e2e;
   text-decoration: none;
   transition: color 0.3s;
@@ -302,6 +310,11 @@ body {
 }
 
 .header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.header .header-box {
   position: absolute;
   top: 0;
   display: flex;
@@ -317,7 +330,7 @@ body {
   z-index: 0;
   overflow: hidden;
 }
-.header .header__img-shadow {
+.header .header-box .header__img-shadow {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -326,20 +339,20 @@ body {
   background-color: hsla(29, 57%, 7%, 0.603);
   z-index: 2;
 }
-.header .header__text-box {
+.header .header-box .header__text-box {
   color: #eee;
   font-family: "Dancing Script", cursive;
   text-align: center;
   z-index: 3;
 }
-.header .header__text-box .title {
+.header .header-box .header__text-box .title {
   font-size: 6rem;
   font-weight: 300;
 }
-.header .header__text-box .text {
+.header .header-box .header__text-box .text {
   font-size: 3rem;
 }
-.header__arrow {
+.header .header-box .header__arrow {
   position: absolute;
   left: 50%;
   bottom: 10px;
@@ -348,6 +361,20 @@ body {
   color: #eee;
   text-decoration: none;
   z-index: 3;
+}
+
+.introduction {
+  position: relative;
+  background-color: #eee;
+}
+.introduction .section-content {
+  display: flex;
+  flex-direction: row;
+}
+.introduction .section-content .section-img {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/introduction.jpg);
 }
 
 @media (min-width: 576px) {
@@ -396,10 +423,10 @@ body {
     display: flex;
   }
   .nav .nav__desktop .nav__desktop-title .nav-logo {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   .nav .nav__desktop .nav__items .nav__item {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
   .header__text-box .title {
     font-size: 12rem !important;

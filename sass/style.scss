@@ -15,6 +15,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	border: 0;
 }
 
 html {
@@ -34,6 +35,10 @@ body {
 	max-width: 1400px;
 }
 
+.scroll-block {
+	overflow: hidden;
+}
+
 //Elementy wjeżdzają z boku
 @keyframes navItemAnimation {
 	from {
@@ -46,16 +51,19 @@ body {
 //---
 //Navigation
 //---
-.hamburger {
-	position: absolute;
-	top: 3em;
+.hamburger-box {
+	position: fixed;
+	top: 1em;
 	right: 1em;
-	transform: translateY(-50%);
 	z-index: 200;
-	&-inner,
-	&-inner::after,
-	&-inner::before {
-		background-color: $light-white;
+	.hamburger {
+		position: sticky;
+		z-index: 200;
+		&-inner,
+		&-inner::after,
+		&-inner::before {
+			background-color: $light-white;
+		}
 	}
 }
 .nav {
@@ -70,6 +78,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		height: 100vh;
 		width: 100%;
 		background-color: $light-white;
@@ -121,7 +130,7 @@ body {
 				margin: 0 10px;
 				padding: 5px 15px;
 				font-family: "Dancing Script", cursive;
-				font-size: 4rem;
+				font-size: 2.5rem;
 				text-decoration: none;
 				color: $dark;
 				span {
@@ -139,7 +148,7 @@ body {
 				display: block;
 				margin: 0.5em 0;
 				padding: 0.5em 1em;
-				font-size: 2rem;
+				font-size: 1.5rem;
 				color: $dark;
 				text-decoration: none;
 				transition: color 0.3s;
@@ -168,54 +177,78 @@ body {
 .nav__mobile-active {
 	transform: translateX(0);
 }
+
 // ---
 // Header
 // ---
 .header {
-	position: absolute;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
 	height: 100vh;
 	width: 100%;
-	@include heroImages("../img/main.jpg");
-	background-attachment: scroll;
-	z-index: 0;
-	overflow: hidden;
-	.header__img-shadow {
+	.header-box {
 		position: absolute;
-		width: 100%;
-		height: 100%;
 		top: 0;
-		left: 0;
-		background-color: $header-shadow;
-		z-index: 2;
-	}
-	.header__text-box {
-		color: $light-white;
-		font-family: "Dancing Script", cursive;
-		text-align: center;
-		z-index: 3;
-		.title {
-			font-size: 6rem;
-			font-weight: 300;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		@include heroImages("../img/main.jpg");
+		background-attachment: scroll;
+		z-index: 0;
+		overflow: hidden;
+		.header__img-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: $header-shadow;
+			z-index: 2;
 		}
-		.text {
-			font-size: 3rem;
+		.header__text-box {
+			color: $light-white;
+			font-family: "Dancing Script", cursive;
+			text-align: center;
+			z-index: 3;
+			.title {
+				font-size: 6rem;
+				font-weight: 300;
+			}
+			.text {
+				font-size: 3rem;
+			}
 		}
-	}
-	&__arrow {
-		position: absolute;
-		left: 50%;
-		bottom: 10px;
-		transform: translateX(-50%);
-		font-size: 1.5em;
-		color: $light-white;
-		text-decoration: none;
-		z-index: 3;
+		.header__arrow {
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			transform: translateX(-50%);
+			font-size: 1.5em;
+			color: $light-white;
+			text-decoration: none;
+			z-index: 3;
+		}
 	}
 }
+
+// ---
+// Main > Introduction
+// ---
+.introduction {
+	position: relative;
+	background-color: $light-white;
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		.section-img {
+			width: 200px;
+			height: 200px;
+			background-image: url(../img/introduction.jpg);
+		}
+	}
+}
+
 //Breakpoints
 
 //small
@@ -277,12 +310,12 @@ body {
 			display: flex;
 			.nav__desktop-title {
 				.nav-logo {
-					font-size: 5rem;
+					font-size: 3.5rem;
 				}
 			}
 			.nav__items {
 				.nav__item {
-					font-size: 2.4rem;
+					font-size: 1.8rem;
 				}
 			}
 		}
