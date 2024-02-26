@@ -39,6 +39,26 @@ body {
 	overflow: hidden;
 }
 
+.transparent-button {
+	margin: auto;
+	padding: 15px;
+	border: 5px solid $main-color;
+	text-decoration: none;
+	color: $main-color;
+	font-weight: bold;
+}
+
+.img-border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 5px solid $main-color;
+	transform: translate(15px, 15px);
+	z-index: 1;
+}
+
 //Elementy wjeżdzają z boku
 @keyframes navItemAnimation {
 	from {
@@ -67,7 +87,8 @@ body {
 	}
 }
 .nav {
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top: 0px;
 	background-color: $light-white;
 	z-index: 20;
@@ -93,7 +114,7 @@ body {
 				display: block;
 				margin: 0.5em 0;
 				padding: 0.5em 1em;
-				font-size: 2rem;
+				font-size: 2.5rem;
 				color: $dark;
 				text-decoration: none;
 				transition: color 0.3s;
@@ -240,11 +261,47 @@ body {
 	background-color: $light-white;
 	.section-content {
 		display: flex;
-		flex-direction: row;
-		.section-img {
-			width: 200px;
-			height: 200px;
-			background-image: url(../img/introduction.jpg);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 3em 0em;
+		.img-box {
+			display: none;
+			position: relative;
+			height: 150px;
+			width: 70px;
+			z-index: 0;
+			.section-img {
+				position: relative;
+				height: 500px;
+				width: 400px;
+				background-image: url("../img/introduction.jpg");
+				background-size: cover;
+				background-position: center;
+				z-index: 2;
+			}
+		}
+		.text-box {
+			position: relative;
+			margin: 0 2em;
+			.title {
+				color: $main-color;
+				text-align: center;
+				margin: 1em 0;
+			}
+			.text {
+				margin-bottom: 3em;
+
+				font-size: 1.8rem;
+				color: $dark;
+				text-align: justify;
+				.more-text {
+					display: none;
+				}
+			}
+			.button {
+				text-align: center;
+			}
 		}
 	}
 }
@@ -266,6 +323,72 @@ body {
 			font-size: 2em;
 		}
 	}
+
+	.introduction {
+		.section-content {
+			flex-direction: row;
+			margin: 6em 2em;
+			.img-box {
+				display: block;
+				height: 400px;
+				width: 250px;
+				margin-top: -74px;
+
+				.section-img {
+					height: 400px;
+					width: 250px;
+				}
+			}
+			.text-box {
+				position: relative;
+				margin-left: 2em;
+				width: 100%;
+				
+				.title {
+					color: $main-color;
+					text-align: left;
+					margin: 1em 0;
+				}
+				.text {
+					margin-bottom: 2em;
+
+					font-size: 1.8rem;
+					color: $dark;
+					text-align: left;
+				}
+				.button {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 680px) {
+	.introduction {
+		.section-content {
+			.img-box {
+				height: 560px;
+				margin-top: 0;
+				.section-img {
+					height: 560px;
+				}
+			}
+			.text-box {
+				width: 100%;
+				margin-top: -23px;
+				.text {
+					.more-text {
+						display: block;
+						padding-bottom: 6px;
+					}
+				}
+				.button {
+					text-align: right;
+				}
+			}
+		}
+	}
 }
 
 //medium
@@ -285,7 +408,20 @@ body {
 			display: flex;
 		}
 	}
-
+	.introduction {
+		.section-content {
+			.img-box {
+				height: 400px;
+				margin-top: -72px;
+				.section-img {
+					height: 400px;
+				}
+			}
+			.text-box {
+				margin-top: 0px;
+			}
+		}
+	}
 	.header {
 		&__text-box {
 			.title {
@@ -300,6 +436,9 @@ body {
 
 //large
 @media (min-width: 992px) {
+	.img-border {
+		transform: translate(30px, 30px);
+	}
 	.nav {
 		padding: 1px;
 		border-bottom: 1px solid $dark;
@@ -321,6 +460,46 @@ body {
 		}
 	}
 
+	.introduction {
+		.section-content {
+			margin: 8em 2em;
+			.img-box {
+				height: 600px;
+				width: 400px;
+				// margin-right: 200px;
+				.section-img {
+					height: 600px;
+					width: 400px;
+				}
+			}
+			.text-box {
+				height: 700px;
+				margin-top: 0px;
+				margin-left: 5em;
+				margin-right: 0;
+				.title {
+					// margin-top: .8em;
+					font-size: 3.1rem;
+				}
+				.text {
+					font-size: 2rem;
+				}
+				.button {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+	.header {
+		&__text-box {
+			.title {
+				font-size: 10rem !important;
+			}
+			.text {
+				font-size: 4rem !important;
+			}
+		}
+	}
 	.header {
 		&__text-box {
 			.title {
@@ -328,6 +507,38 @@ body {
 			}
 			.text {
 				font-size: 5rem !important;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.introduction {
+		.section-content {
+			margin: 10em 3em;
+			.img-box {
+				height: 700px;
+				width: 500px;
+				// margin-right: 200px;
+				.section-img {
+					height: 700px;
+					width: 500px;
+				}
+			}
+			.text-box {
+				height: 700px;
+				margin-top: 0px;
+				margin-left: 6em;
+				.title {
+					margin-top: 0;
+					font-size: 3.8rem;
+				}
+				.text {
+					font-size: 2.5rem;
+				}
+				.button {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
