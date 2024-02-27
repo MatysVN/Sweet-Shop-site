@@ -183,6 +183,7 @@ body {
   margin: auto;
   padding: 15px;
   border: 5px solid #D18A48;
+  background-color: rgba(0, 0, 0, 0);
   text-decoration: none;
   color: #D18A48;
   font-weight: bold;
@@ -433,6 +434,98 @@ body {
   text-align: center;
 }
 
+.samples {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-top: 10em;
+}
+.samples .samples-box {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 2em;
+  height: 500px;
+  width: 100%;
+  transform: translateY(100px);
+  z-index: 1;
+}
+.samples .samples-box .button {
+  position: absolute;
+  left: 50%;
+  bottom: -2em;
+  font-size: 1.9rem;
+  transform: translateX(-50%);
+}
+.samples .samples-box .sample {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  height: 500px;
+  width: 100%;
+  padding: 0 4em;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2e2e2e;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.samples .samples-box .sample .sample-img {
+  height: 80%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.samples .samples-box .sample .one {
+  background-image: url("../img/vanilla-cake.jpg");
+}
+.samples .samples-box .sample .two {
+  background-image: url("../img/strawberry-ecler.jpg");
+}
+.samples .samples-box .sample .three {
+  background-image: url("../img/chocolate-pops.jpg");
+}
+.samples .samples-box .sample .four {
+  background-image: url("../img/jam-428094_640.jpg");
+}
+.samples .samples-box .sample .sample-info {
+  height: 27%;
+  width: 100%;
+  background-color: #eee;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.samples .samples-box .sample .sample-info .sample-heading {
+  padding: 20px 0px 10px;
+  font-size: 2.2rem;
+}
+.samples .samples-box .sample .sample-info .sample-text {
+  padding: 0px 20px;
+  font-size: 1.8rem;
+}
+.samples .sample-desktop {
+  display: none;
+}
+.samples .samples-bg {
+  position: relative;
+  height: 90vh;
+  top: 100px;
+  background-color: #DFDFDF;
+  z-index: 0;
+}
+.samples .samples-bg .button {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+.samples .samples-bg .button .transparent-button {
+  font-size: 2.3rem;
+}
+
 @media (min-width: 576px) {
   .header .header__text-box .title {
     font-size: 8rem;
@@ -529,6 +622,44 @@ body {
   .header__text-box .text {
     font-size: 4rem !important;
   }
+  .samples .samples-box {
+    left: 0%;
+  }
+  .samples .samples-box .sample {
+    position: relative;
+    left: 0;
+    height: 360px;
+    width: 30%;
+    padding: 0 1em;
+    transform: translateX(0%);
+  }
+  .samples .samples-box .sample .sample-img {
+    height: 60%;
+  }
+  .samples .samples-box .sample .sample-info {
+    height: 40%;
+  }
+  .samples .samples-box .sample .sample-info .sample-heading {
+    padding: 15px 5px 10px;
+    font-size: 2.2rem;
+  }
+  .samples .samples-box .sample .sample-info .sample-text {
+    padding: 0px 10px;
+    font-size: 1.8rem;
+  }
+  .samples .samples-bg {
+    position: relative;
+    height: 65vh;
+    top: 100px;
+    background-color: #DFDFDF;
+    z-index: 0;
+  }
+  .samples .samples-bg .button {
+    bottom: 26%;
+  }
+  .samples .samples-bg .button .transparent-button {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 992px) {
   .img-border {
@@ -568,25 +699,52 @@ body {
     margin-right: 0;
   }
   .introduction .section-content .text-box .title {
-    font-size: 3.1rem;
+    font-size: 4rem;
   }
   .introduction .section-content .text-box .text {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .introduction .section-content .text-box .button {
-    font-size: 1.6rem;
-  }
-  .header__text-box .title {
-    font-size: 10rem !important;
-  }
-  .header__text-box .text {
-    font-size: 4rem !important;
+    font-size: 1.8rem;
   }
   .header__text-box .title {
     font-size: 12rem !important;
   }
   .header__text-box .text {
     font-size: 5rem !important;
+  }
+  .samples .samples-box {
+    left: 0%;
+  }
+  .samples .samples-box .sample {
+    position: relative;
+    left: 0;
+    height: 360px;
+    width: 25%;
+    padding: 0 1em;
+    transform: translateX(0%);
+  }
+  .samples .samples-box .sample .sample-img {
+    height: 60%;
+  }
+  .samples .samples-box .sample .sample-info {
+    height: 40%;
+  }
+  .samples .samples-box .sample-desktop {
+    display: block;
+  }
+  .samples .samples-bg {
+    position: relative;
+    height: 65vh;
+    top: 100px;
+    background-color: #DFDFDF;
+    z-index: 0;
+  }
+  .samples .samples-bg .button {
+    bottom: 26%;
+  }
+  .samples .samples-bg .button .transparent-button {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1400px) {

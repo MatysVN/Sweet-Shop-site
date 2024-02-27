@@ -43,6 +43,7 @@ body {
 	margin: auto;
 	padding: 15px;
 	border: 5px solid $main-color;
+	background-color: rgba($color: #000000, $alpha: 0);
 	text-decoration: none;
 	color: $main-color;
 	font-weight: bold;
@@ -306,6 +307,105 @@ body {
 	}
 }
 
+// ---
+// Main > Samples
+// ---
+
+.samples {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-top: 10em;
+
+	.samples-box {
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 0 2em;
+		height: 500px;
+		width: 100%;
+		transform: translateY(100px);
+		z-index: 1;
+		.button {
+			position: absolute;
+			left: 50%;
+			bottom: -2em;
+			font-size: 1.9rem;
+			transform: translateX(-50%);
+		}
+
+		.sample {
+			position: absolute;
+			top: -100px;
+			left: 50%;
+			height: 500px;
+			width: 100%;
+			padding: 0 4em;
+			border-radius: 8px;
+			text-decoration: none;
+			color: $dark;
+			text-align: center;
+			transform: translateX(-50%);
+			.sample-img {
+				height: 80%;
+				width: 100%;
+
+				background-position: center;
+				background-size: cover;
+				border-top-right-radius: 15px;
+				border-top-left-radius: 15px;
+			}
+			.one {
+				background-image: url("../img/vanilla-cake.jpg");
+			}
+			.two {
+				background-image: url("../img/strawberry-ecler.jpg");
+			}
+			.three {
+				background-image: url("../img/chocolate-pops.jpg");
+			}
+			.four {
+				background-image: url("../img/jam-428094_640.jpg");
+			}
+			.sample-info {
+				height: 27%;
+				width: 100%;
+				background-color: $light-white;
+				border-bottom-right-radius: 15px;
+				border-bottom-left-radius: 15px;
+				.sample-heading {
+					padding: 20px 0px 10px;
+					font-size: 2.2rem;
+				}
+				.sample-text {
+					padding: 0px 20px;
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+	.sample-desktop {
+		display: none;
+	}
+	.samples-bg {
+		position: relative;
+		height: 90vh;
+		top: 100px;
+		background-color: $section-color;
+		z-index: 0;
+		.button {
+			position: absolute;
+			left: 50%;
+			bottom: 20%;
+			transform: translateX(-50%);
+			.transparent-button {
+				font-size: 2.3rem;
+			}
+		}
+	}
+}
+
 //Breakpoints
 
 //small
@@ -343,7 +443,7 @@ body {
 				position: relative;
 				margin-left: 2em;
 				width: 100%;
-				
+
 				.title {
 					color: $main-color;
 					text-align: left;
@@ -432,6 +532,47 @@ body {
 			}
 		}
 	}
+
+	.samples {
+		.samples-box {
+			left: 0%;
+			.sample {
+				position: relative;
+				left: 0;
+				height: 360px;
+				width: 30%;
+				padding: 0 1em;
+				transform: translateX(0%);
+				.sample-img {
+					height: 60%;
+				}
+				.sample-info {
+					height: 40%;
+					.sample-heading {
+						padding: 15px 5px 10px;
+						font-size: 2.2rem;
+					}
+					.sample-text {
+						padding: 0px 10px;
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+		.samples-bg {
+			position: relative;
+			height: 65vh;
+			top: 100px;
+			background-color: $section-color;
+			z-index: 0;
+			.button {
+				bottom: 26%;
+				.transparent-button {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 }
 
 //large
@@ -479,27 +620,18 @@ body {
 				margin-right: 0;
 				.title {
 					// margin-top: .8em;
-					font-size: 3.1rem;
+					font-size: 4rem;
 				}
 				.text {
-					font-size: 2rem;
+					font-size: 2.2rem;
 				}
 				.button {
-					font-size: 1.6rem;
+					font-size: 1.8rem;
 				}
 			}
 		}
 	}
-	.header {
-		&__text-box {
-			.title {
-				font-size: 10rem !important;
-			}
-			.text {
-				font-size: 4rem !important;
-			}
-		}
-	}
+
 	.header {
 		&__text-box {
 			.title {
@@ -507,6 +639,41 @@ body {
 			}
 			.text {
 				font-size: 5rem !important;
+			}
+		}
+	}
+	.samples {
+		.samples-box {
+			left: 0%;
+			.sample {
+				position: relative;
+				left: 0;
+				height: 360px;
+				width: 25%;
+				padding: 0 1em;
+				transform: translateX(0%);
+				.sample-img {
+					height: 60%;
+				}
+				.sample-info {
+					height: 40%;
+				}
+			}
+			.sample-desktop {
+				display: block;
+			}
+		}
+		.samples-bg {
+			position: relative;
+			height: 65vh;
+			top: 100px;
+			background-color: $section-color;
+			z-index: 0;
+			.button {
+				bottom: 26%;
+				.transparent-button {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
