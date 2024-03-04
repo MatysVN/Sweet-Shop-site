@@ -39,6 +39,18 @@ body {
 	overflow: hidden;
 }
 
+.nav-logo {
+	margin: 0 10px;
+	padding: 5px 15px;
+	font-family: "Dancing Script", cursive;
+	font-size: 2.5rem;
+	text-decoration: none;
+	color: $dark;
+	span {
+		color: $main-color;
+	}
+}
+
 .transparent-button {
 	margin: auto;
 	padding: 15px;
@@ -148,17 +160,6 @@ body {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			.nav-logo {
-				margin: 0 10px;
-				padding: 5px 15px;
-				font-family: "Dancing Script", cursive;
-				font-size: 2.5rem;
-				text-decoration: none;
-				color: $dark;
-				span {
-					color: $main-color;
-				}
-			}
 		}
 		.nav__items {
 			display: flex;
@@ -554,6 +555,69 @@ body {
 				margin-bottom: 20px;
 				border: 3px solid $light-white;
 				color: $light-white;
+			}
+		}
+	}
+}
+
+// ---
+// Main > info
+// ---
+
+.info {
+	background-color: $light-white;
+	.info-box {
+		position: relative;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		a {
+			text-decoration: none;
+			color: $dark;
+			transition: color .2s;
+		}
+		a:hover {
+			color: $main-color;
+		}
+		.one {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			text-align: left;
+			
+			.text {
+				text-align: left;
+			}
+			.contact {
+				text-align-last: left;
+			}
+			.fa-solid {
+				padding: 5px;
+				font-size: 1.8rem;
+			}
+		}
+		.two {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			border-left: 2px solid $main-color;
+			border-right: 2px solid $main-color;
+			a {
+				margin-top: 10px;
+			}
+		}
+		.three {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			.fa-brands {
+				font-size: 1.8rem;
+				padding: 10px;
+			}
+		}
+		.info-box-element {
+			margin: 30px;
+			text-align: center;
+			h2 {
+				margin: 15px;
 			}
 		}
 	}
@@ -1052,7 +1116,7 @@ body {
 			.reviews-box {
 				position: relative;
 				width: 75%;
-				
+
 				.review {
 					.review-text {
 						.author {
@@ -1070,7 +1134,7 @@ body {
 				flex-direction: column;
 				position: relative;
 				bottom: 17em;
-				left:78%;
+				left: 78%;
 				width: 20%;
 				border: 5px solid $light-white;
 				background-color: $header-shadow;
