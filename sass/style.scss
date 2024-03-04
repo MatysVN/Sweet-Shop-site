@@ -566,12 +566,14 @@ body {
 
 .info {
 	background-color: $light-white;
+	padding: 3em 0em;
 	.info-box {
 		position: relative;
 		overflow: hidden;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		padding-top: 40px;
 		a {
 			text-decoration: none;
 			color: $dark;
@@ -583,13 +585,20 @@ body {
 		.one {
 			grid-column: 1/2;
 			grid-row: 1/2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			text-align: left;
-			
+			border-top: 2px solid $main-color;
+			.nav-logo {
+				font-size: 3.5rem;
+				padding-top: 50px;
+			}
 			.text {
 				text-align: left;
 			}
 			.contact {
-				text-align-last: left;
+				text-align: left;
 			}
 			.fa-solid {
 				padding: 5px;
@@ -597,17 +606,22 @@ body {
 			}
 		}
 		.two {
-			grid-column: 2/3;
-			grid-row: 1/2;
-			border-left: 2px solid $main-color;
-			border-right: 2px solid $main-color;
+			grid-column: 1/2;
+			grid-row: 2/3;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-top: 2px solid $main-color;
+			border-bottom: 2px solid $main-color;
 			a {
 				margin-top: 10px;
 			}
 		}
 		.three {
-			grid-column: 3/4;
-			grid-row: 1/2;
+			grid-column: 1/2;
+			grid-row: 3/4;
+			height: 180px;
+			border-bottom: 2px solid $main-color;
 			.fa-brands {
 				font-size: 1.8rem;
 				padding: 10px;
@@ -616,9 +630,7 @@ body {
 		.info-box-element {
 			margin: 30px;
 			text-align: center;
-			h2 {
-				margin: 15px;
-			}
+			
 		}
 	}
 }
@@ -786,6 +798,7 @@ body {
 			}
 		}
 	}
+	
 }
 
 @media (min-width: 680px) {
@@ -826,6 +839,47 @@ body {
 			.rate-box {
 				width: 50%;
 			}
+		}
+	}
+	.info {
+		padding: 1em 0em;
+		.info-box {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+			.one {
+				border-top: none;
+				margin-right: 0;
+				.nav-logo {
+					font-size: 3.5rem;
+					padding-top: 0px;
+				}
+			}
+			.two {
+				grid-column: 2/3;
+				grid-row: 1/2;
+				align-items: center;
+				margin: 30px 10px;
+				padding: 0 10px;
+				border-top: none;
+				border-bottom: none;
+				border-left: 2px solid $main-color;
+				border-right: 2px solid $main-color;
+			}
+			.three {
+				grid-column: 3/4;
+				grid-row: 1/2;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 73%;
+				margin-left: 0;
+				border-bottom: none;
+				br {
+					display: none;
+				}
+			}
+			
 		}
 	}
 }
@@ -919,7 +973,7 @@ body {
 		}
 		.samples-bg {
 			position: relative;
-			height: 40vh;
+			height: 48vh;
 			top: 70px;
 			background-color: $section-color;
 			z-index: 0;
@@ -1073,6 +1127,52 @@ body {
 					font-size: 2rem;
 				}
 			}
+		}
+	}
+	.info {
+		padding: 1em 0em;
+		.info-box {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+			.one {
+				border-top: none;
+				margin-right: 0;
+				.nav-logo {
+					font-size: 3.5rem;
+					padding-top: 0px;
+				}
+			}
+			.two {
+				grid-column: 2/3;
+				grid-row: 1/2;
+				align-items: center;
+				justify-content: flex-start;
+				margin: 30px 10px;
+				padding: 0 10px;
+				border-top: none;
+				border-bottom: none;
+				border-left: 2px solid $main-color;
+				border-right: 2px solid $main-color;
+			}
+			.three {
+				grid-column: 3/4;
+				grid-row: 1/2;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				height: 100%;
+				margin-left: 0;
+				border-bottom: none;
+				br {
+					display: none;
+				}
+				.fa-brands {
+					font-size: 2rem;
+					padding: 10px;
+				}
+			}
+			
 		}
 	}
 }

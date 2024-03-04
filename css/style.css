@@ -697,13 +697,15 @@ body {
 
 .info {
   background-color: #eee;
+  padding: 3em 0em;
 }
 .info .info-box {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  padding-top: 40px;
 }
 .info .info-box a {
   text-decoration: none;
@@ -716,31 +718,43 @@ body {
 .info .info-box .one {
   grid-column: 1/2;
   grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
+  border-top: 2px solid #D18A48;
+}
+.info .info-box .one .nav-logo {
+  font-size: 3.5rem;
+  padding-top: 50px;
 }
 .info .info-box .one .text {
   text-align: left;
 }
 .info .info-box .one .contact {
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
 }
 .info .info-box .one .fa-solid {
   padding: 5px;
   font-size: 1.8rem;
 }
 .info .info-box .two {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  border-left: 2px solid #D18A48;
-  border-right: 2px solid #D18A48;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 2px solid #D18A48;
+  border-bottom: 2px solid #D18A48;
 }
 .info .info-box .two a {
   margin-top: 10px;
 }
 .info .info-box .three {
-  grid-column: 3/4;
-  grid-row: 1/2;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  height: 180px;
+  border-bottom: 2px solid #D18A48;
 }
 .info .info-box .three .fa-brands {
   font-size: 1.8rem;
@@ -749,9 +763,6 @@ body {
 .info .info-box .info-box-element {
   margin: 30px;
   text-align: center;
-}
-.info .info-box .info-box-element h2 {
-  margin: 15px;
 }
 
 @media (min-width: 375px) {
@@ -907,6 +918,46 @@ body {
   .reviews .wrapper-box .rate-box {
     width: 50%;
   }
+  .info {
+    padding: 1em 0em;
+  }
+  .info .info-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .info .info-box .one {
+    border-top: none;
+    margin-right: 0;
+  }
+  .info .info-box .one .nav-logo {
+    font-size: 3.5rem;
+    padding-top: 0px;
+  }
+  .info .info-box .two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-items: center;
+    margin: 30px 10px;
+    padding: 0 10px;
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid #D18A48;
+    border-right: 2px solid #D18A48;
+  }
+  .info .info-box .three {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 73%;
+    margin-left: 0;
+    border-bottom: none;
+  }
+  .info .info-box .three br {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .hamburger {
@@ -984,7 +1035,7 @@ body {
   }
   .samples .samples-bg {
     position: relative;
-    height: 40vh;
+    height: 48vh;
     top: 70px;
     background-color: #DFDFDF;
     z-index: 0;
@@ -1110,6 +1161,51 @@ body {
   .samples .samples-bg .button .transparent-button {
     cursor: pointer;
     font-size: 2rem;
+  }
+  .info {
+    padding: 1em 0em;
+  }
+  .info .info-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .info .info-box .one {
+    border-top: none;
+    margin-right: 0;
+  }
+  .info .info-box .one .nav-logo {
+    font-size: 3.5rem;
+    padding-top: 0px;
+  }
+  .info .info-box .two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 10px;
+    padding: 0 10px;
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid #D18A48;
+    border-right: 2px solid #D18A48;
+  }
+  .info .info-box .three {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-left: 0;
+    border-bottom: none;
+  }
+  .info .info-box .three br {
+    display: none;
+  }
+  .info .info-box .three .fa-brands {
+    font-size: 2rem;
+    padding: 10px;
   }
 }
 @media (min-width: 1400px) {
