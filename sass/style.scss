@@ -577,7 +577,7 @@ body {
 		a {
 			text-decoration: none;
 			color: $dark;
-			transition: color .2s;
+			transition: color 0.2s;
 		}
 		a:hover {
 			color: $main-color;
@@ -590,6 +590,9 @@ body {
 			justify-content: center;
 			text-align: left;
 			border-top: 2px solid $main-color;
+			.contact {
+				font-size: 2rem;
+			}
 			.nav-logo {
 				font-size: 3.5rem;
 				padding-top: 50px;
@@ -602,7 +605,6 @@ body {
 			}
 			.fa-solid {
 				padding: 5px;
-				font-size: 1.8rem;
 			}
 		}
 		.two {
@@ -626,15 +628,28 @@ body {
 				font-size: 1.8rem;
 				padding: 10px;
 			}
+			a {
+				font-size: 2rem;
+			}
 		}
 		.info-box-element {
 			margin: 30px;
 			text-align: center;
-			
 		}
 	}
 }
 
+// ---
+// Footer
+// ---
+.footer {
+	background-color: $section-color;
+	p {
+		text-align: right;
+		padding: 10px;
+		margin-bottom: 0;
+	}
+}
 //Breakpoints
 
 @media (min-width: 375px) {
@@ -798,7 +813,6 @@ body {
 			}
 		}
 	}
-	
 }
 
 @media (min-width: 680px) {
@@ -879,7 +893,6 @@ body {
 					display: none;
 				}
 			}
-			
 		}
 	}
 }
@@ -1172,7 +1185,6 @@ body {
 					padding: 10px;
 				}
 			}
-			
 		}
 	}
 }

@@ -724,6 +724,9 @@ body {
   text-align: left;
   border-top: 2px solid #D18A48;
 }
+.info .info-box .one .contact {
+  font-size: 2rem;
+}
 .info .info-box .one .nav-logo {
   font-size: 3.5rem;
   padding-top: 50px;
@@ -736,7 +739,6 @@ body {
 }
 .info .info-box .one .fa-solid {
   padding: 5px;
-  font-size: 1.8rem;
 }
 .info .info-box .two {
   grid-column: 1/2;
@@ -760,9 +762,21 @@ body {
   font-size: 1.8rem;
   padding: 10px;
 }
+.info .info-box .three a {
+  font-size: 2rem;
+}
 .info .info-box .info-box-element {
   margin: 30px;
   text-align: center;
+}
+
+.footer {
+  background-color: #DFDFDF;
+}
+.footer p {
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 375px) {
