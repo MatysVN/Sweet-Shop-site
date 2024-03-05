@@ -72,6 +72,10 @@ body {
 	z-index: 1;
 }
 
+.hiddenElement {
+	display: none !important;
+}
+
 //Elementy wjeżdzają z boku
 @keyframes navItemAnimation {
 	from {
@@ -95,7 +99,7 @@ body {
 		&-inner,
 		&-inner::after,
 		&-inner::before {
-			background-color: $light-white;
+			background-color: $main-color;
 		}
 	}
 }
@@ -208,6 +212,7 @@ body {
 	position: relative;
 	height: 100vh;
 	width: 100%;
+	z-index: 1000;
 	.header-box {
 		position: absolute;
 		top: 0;
@@ -261,7 +266,9 @@ body {
 .introduction {
 	position: relative;
 	background-color: $light-white;
-	margin: 10em 0;
+	margin: 5em 0;
+	// margin-top: 57px;
+    // padding-top: 50px;
 	.section-content {
 		display: flex;
 		flex-direction: column;
@@ -567,13 +574,20 @@ body {
 .info {
 	background-color: $light-white;
 	padding: 3em 0em;
+	.title {
+		color: $main-color;
+		text-align: center;
+		margin-top: 1em 0;
+		font-size: 2.5rem;
+	}
 	.info-box {
 		position: relative;
 		overflow: hidden;
 		display: grid;
 		grid-template-rows: repeat(3, 1fr);
 		grid-template-columns: 1fr;
-		padding-top: 40px;
+		padding-top: 0px;
+		
 		a {
 			text-decoration: none;
 			color: $dark;
@@ -625,8 +639,8 @@ body {
 			height: 180px;
 			border-bottom: 2px solid $main-color;
 			.fa-brands {
-				font-size: 1.8rem;
-				padding: 10px;
+				font-size: 4.8rem;
+				padding: 15px;
 			}
 			a {
 				font-size: 2rem;
@@ -856,7 +870,7 @@ body {
 		}
 	}
 	.info {
-		padding: 1em 0em;
+		padding: 3em 0em;
 		.info-box {
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: 1fr;
@@ -878,6 +892,9 @@ body {
 				border-bottom: none;
 				border-left: 2px solid $main-color;
 				border-right: 2px solid $main-color;
+				h2 {
+					transform: translateY(-40px);
+				}
 			}
 			.three {
 				grid-column: 3/4;
@@ -915,6 +932,7 @@ body {
 		}
 	}
 	.introduction {
+		padding-top: 2em;
 		.section-content {
 			.img-box {
 				height: 400px;
@@ -986,7 +1004,7 @@ body {
 		}
 		.samples-bg {
 			position: relative;
-			height: 48vh;
+			height: 60vh;
 			top: 70px;
 			background-color: $section-color;
 			z-index: 0;
@@ -1018,6 +1036,16 @@ body {
 				width: 25%;
 				transform: translateX(0%);
 			}
+		}
+	}
+	.info {
+		.info-box {
+			.two {
+				h2 {
+					transform: translateY(0px);
+				}
+			}
+			
 		}
 	}
 }
@@ -1143,7 +1171,10 @@ body {
 		}
 	}
 	.info {
-		padding: 1em 0em;
+		padding: 3em 0em;
+		.title {
+			margin: 1em;
+		}
 		.info-box {
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: 1fr;
@@ -1191,6 +1222,7 @@ body {
 
 @media (min-width: 1400px) {
 	.introduction {
+		margin-top: 15em;
 		.section-content {
 			margin: 10em 3em;
 			.img-box {
