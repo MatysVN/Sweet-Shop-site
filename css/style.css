@@ -362,29 +362,23 @@ body {
   transform: translateX(0);
 }
 
-.header {
+.header-styles {
   position: relative;
-  height: 100vh;
   width: 100%;
   z-index: 1000;
 }
-.header .header-box {
+.header-styles .header-box {
   position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
-  background-image: url("../img/main.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   background-attachment: scroll;
   z-index: 0;
   overflow: hidden;
 }
-.header .header-box .header__img-shadow {
+.header-styles .header-box .header__img-shadow {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -393,20 +387,13 @@ body {
   background-color: hsla(29, 57%, 7%, 0.603);
   z-index: 2;
 }
-.header .header-box .header__text-box {
+.header-styles .header-box .header__text-box {
   color: #eee;
   font-family: "Dancing Script", cursive;
   text-align: center;
   z-index: 3;
 }
-.header .header-box .header__text-box .title {
-  font-size: 6rem;
-  font-weight: 300;
-}
-.header .header-box .header__text-box .text {
-  font-size: 3rem;
-}
-.header .header-box .header__arrow {
+.header-styles .header-box .header__arrow {
   position: absolute;
   left: 50%;
   bottom: 10px;
@@ -415,6 +402,44 @@ body {
   color: #eee;
   text-decoration: none;
   z-index: 3;
+}
+
+.header {
+  height: 100vh;
+}
+.header .header-box {
+  height: 100vh;
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header .header-box .header__text-box .title {
+  font-size: 6rem;
+  font-weight: 300;
+}
+.header .header-box .header__text-box .text {
+  font-size: 3rem;
+}
+
+.subpages-header {
+  height: 40em;
+  z-index: 1;
+}
+.subpages-header .header-box {
+  height: 40em;
+  background-image: url("../img/tea640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.subpages-header .header-box .header__text-box .title {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.subpages-header .header-box .header__text-box .text {
+  font-size: 2rem;
 }
 
 .introduction {
@@ -465,6 +490,59 @@ body {
 }
 .introduction .section-content .text-box .button {
   text-align: center;
+}
+
+.history-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 60em;
+  margin-top: 3em;
+  background-color: red;
+}
+.history-box img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.history-box .img-border {
+  z-index: -1;
+}
+.history-box .border-reverse {
+  transform: translate(30px, -30px);
+}
+.history-box .history-img {
+  position: relative;
+  width: 93%;
+  height: 90%;
+}
+.history-box .img-one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.history-box .text-one {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.history-box .img-two {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.history-box .text-two {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.history-box .text {
+  padding: 0 3em;
+}
+.history-box .text .title {
+  position: relative;
+  padding: 3em 0 1em;
+  text-align: left;
+  font-size: 2.5rem;
+  color: #D18A48;
 }
 
 .samples {
@@ -823,6 +901,13 @@ body {
     top: -80px;
     font-size: 4.2rem;
   }
+  .subpages-header .header-box .header__text-box .title {
+    font-size: 5rem;
+    font-weight: 600;
+  }
+  .subpages-header .header-box .header__text-box .text {
+    font-size: 3rem;
+  }
 }
 @media (min-width: 414px) {
   .samples {
@@ -916,6 +1001,24 @@ body {
     top: -80px;
     font-size: 4.2rem;
   }
+  .subpages-header {
+    height: 40em;
+    z-index: 1;
+  }
+  .subpages-header .header-box {
+    height: 40em;
+    background-image: url("../img/tea640.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .subpages-header .header-box .header__text-box .title {
+    font-size: 7rem;
+    font-weight: 600;
+  }
+  .subpages-header .header-box .header__text-box .text {
+    font-size: 4rem;
+  }
 }
 @media (min-width: 680px) {
   .introduction .section-content .img-box {
@@ -1003,6 +1106,31 @@ body {
   .nav .nav__desktop {
     display: flex;
   }
+  .header .header__text-box .title {
+    font-size: 10rem !important;
+  }
+  .header .header__text-box .text {
+    font-size: 4rem !important;
+  }
+  .subpages-header {
+    height: 30em;
+    z-index: 1;
+  }
+  .subpages-header .header-box {
+    height: 30em;
+    background-image: url("../img/tea640.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .subpages-header .header-box .header__text-box .title {
+    margin-top: 65px;
+    font-size: 7rem;
+    font-weight: 600;
+  }
+  .subpages-header .header-box .header__text-box .text {
+    font-size: 4rem;
+  }
   .introduction {
     padding-top: 2em;
   }
@@ -1015,12 +1143,6 @@ body {
   }
   .introduction .section-content .text-box {
     margin-top: 0px;
-  }
-  .header__text-box .title {
-    font-size: 10rem !important;
-  }
-  .header__text-box .text {
-    font-size: 4rem !important;
   }
   .samples .button .transparent-button {
     width: 300px;
@@ -1098,6 +1220,12 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .header .header__text-box .title {
+    font-size: 12rem !important;
+  }
+  .header .header__text-box .text {
+    font-size: 5rem !important;
+  }
   .img-border {
     transform: translate(30px, 30px);
   }
@@ -1142,12 +1270,6 @@ body {
   }
   .introduction .section-content .text-box .button {
     font-size: 1.8rem;
-  }
-  .header__text-box .title {
-    font-size: 12rem !important;
-  }
-  .header__text-box .text {
-    font-size: 5rem !important;
   }
   .samples .button {
     position: absolute;
@@ -1237,15 +1359,27 @@ body {
     margin-left: 0;
     border-bottom: none;
   }
-  .info .info-box .three br {
-    display: none;
-  }
-  .info .info-box .three .fa-brands {
-    font-size: 2rem;
-    padding: 10px;
-  }
 }
 @media (min-width: 1400px) {
+  .subpages-header {
+    height: 30em;
+    z-index: 1;
+  }
+  .subpages-header .header-box {
+    height: 30em;
+    background-image: url("../img/tea640.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .subpages-header .header-box .header__text-box .title {
+    margin-top: 65px;
+    font-size: 9rem;
+    font-weight: 600;
+  }
+  .subpages-header .header-box .header__text-box .text {
+    font-size: 5rem;
+  }
   .introduction {
     margin-top: 15em;
   }

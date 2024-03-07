@@ -7,26 +7,36 @@ const footerYear = document.querySelector(".footer-year");
 const headerSection = document.querySelector(".header");
 const headerArrow = document.querySelector(".header__arrow");
 
+
 const showNav = () => {
 	burgerBtn.classList.toggle("is-active");
 	navMobile.classList.toggle("nav__mobile-active");
 	scrollBlock.classList.toggle("scroll-block");
 };
-
-window.onscroll = function () {
-	const sectionBottom = headerSection.offsetTop + headerSection.offsetHeight;
-
-	if (window.pageYOffset > sectionBottom) {
-		navMobile.classList.remove("hiddenElement");
-	} else {
-		navMobile.classList.add("hiddenElement");
-	}
-	if (window.pageYOffset > sectionBottom) {
-		burgerBox.classList.remove("hiddenElement");
-	} else {
-		burgerBox.classList.add("hiddenElement");
-	}
+const closeNav = () => {
+	burgerBtn.classList.toggle("is-active");
+	navMobile.classList.toggle("nav__mobile-active");
+	scrollBlock.classList.toggle("scroll-block");
 };
+
+window.onload = function () {
+    // Sprawdź, czy aktualny URL zawiera nazwę pliku index.html
+    if (window.location.pathname === '/index.html') {
+        // Wykonaj skrypt tylko jeśli jesteśmy na stronie index.html
+        window.onscroll = function () {
+            const sectionBottom = headerSection.offsetTop + headerSection.offsetHeight;
+
+            if (window.pageYOffset > sectionBottom) {
+                navMobile.classList.remove("hiddenElement");
+                burgerBox.classList.remove("hiddenElement");
+            } else {
+                navMobile.classList.add("hiddenElement");
+                burgerBox.classList.add("hiddenElement");
+            }
+        };
+    }
+};
+
 headerArrow.addEventListener("click", function (event) {
 	event.preventDefault();
 	const targetId = headerArrow.getAttribute("href");
