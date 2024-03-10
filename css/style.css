@@ -927,6 +927,109 @@ body {
   font-size: 1.8rem;
 }
 
+.whyUs {
+  position: relative;
+  background-color: #f1ebe3;
+  padding: 7em 0 4em;
+  overflow: hidden;
+}
+.whyUs .wrapper .section-title {
+  color: #D18A48;
+  text-align: center;
+  padding-bottom: 2em;
+  font-size: 3rem;
+}
+.whyUs .wrapper .section-content {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  width: 100%;
+}
+.whyUs .wrapper .section-content .img-box {
+  display: none;
+  position: relative;
+  width: 90%;
+  height: 300px;
+  background-image: url("../img/manufaktura.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.whyUs .wrapper .section-content .img-box .img-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.whyUs .wrapper .section-content .img-box .img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/manufaktura.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.whyUs .wrapper .section-content .img-box img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.whyUs .wrapper .section-content .text-box {
+  position: relative;
+  text-align: justify;
+  width: 90%;
+  margin-bottom: 30px;
+}
+.whyUs .wrapper .section-content .text-box h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.whyUs .wrapper .contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.whyUs .wrapper .contact-box .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+  background-color: #D18A48;
+  text-align: center;
+}
+.whyUs .wrapper .contact-box .content .text-box {
+  width: 100%;
+  height: 170px;
+}
+.whyUs .wrapper .contact-box .content .text-box .text {
+  margin: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #eee;
+}
+.whyUs .wrapper .contact-box .content .text-box .transparent-button {
+  margin: 20px;
+  padding: 10px;
+  font-size: 2rem;
+  border: 3px solid #eee;
+  color: #eee;
+}
+.whyUs .wrapper .contact-box .content .contact-img {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  background-image: url("../img/manufaktura.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 @media (min-width: 375px) {
   .samples {
     height: 500px;
@@ -1310,6 +1413,52 @@ body {
   .history-box .text .title {
     padding: 0em 0 0.5em;
   }
+  .whyUs {
+    padding: 7em 0;
+    overflow: hidden;
+  }
+  .whyUs .wrapper .section-content {
+    flex-direction: row;
+    margin-bottom: 6em;
+  }
+  .whyUs .wrapper .section-content .img-box {
+    display: block;
+    position: relative;
+    width: 40%;
+    height: 570px;
+  }
+  .whyUs .wrapper .section-content .text-box {
+    position: relative;
+    text-align: left;
+    width: 50%;
+    padding-left: 4em;
+  }
+  .whyUs .wrapper .contact-box .content {
+    flex-direction: row;
+    width: 85%;
+  }
+  .whyUs .wrapper .contact-box .content .text-box {
+    width: 50%;
+    height: auto;
+  }
+  .whyUs .wrapper .contact-box .content .text-box .text {
+    margin: 0;
+    padding: 15px 30px;
+    font-size: 2.3rem;
+  }
+  .whyUs .wrapper .contact-box .content .text-box .transparent-button {
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 2.3rem;
+    border: 3px solid #eee;
+    color: #eee;
+  }
+  .whyUs .wrapper .contact-box .content .contact-img {
+    position: relative;
+    width: 50%;
+    height: 200px;
+    background-image: url("../img/contact.jpg");
+  }
 }
 @media (min-width: 992px) {
   .header .header__text-box .title {
@@ -1459,6 +1608,56 @@ body {
   }
   .history-box .text .title {
     padding: 0em 0 0.5em;
+  }
+  .whyUs {
+    padding: 7em 0;
+    overflow: hidden;
+  }
+  .whyUs .wrapper .section-content {
+    flex-direction: row;
+    margin-bottom: 6em;
+  }
+  .whyUs .wrapper .section-content .img-box {
+    display: block;
+    position: relative;
+    width: 40%;
+    height: 570px;
+  }
+  .whyUs .wrapper .section-content .text-box {
+    position: relative;
+    text-align: left;
+    width: 50%;
+    padding-left: 4em;
+    font-size: 2rem;
+  }
+  .whyUs .wrapper .section-content .text-box h3 {
+    font-size: 2.3rem;
+  }
+  .whyUs .wrapper .contact-box .content {
+    flex-direction: row;
+    width: 85%;
+  }
+  .whyUs .wrapper .contact-box .content .text-box {
+    width: 50%;
+    height: auto;
+  }
+  .whyUs .wrapper .contact-box .content .text-box .text {
+    margin: 0;
+    padding: 15px 30px;
+    font-size: 2.3rem;
+  }
+  .whyUs .wrapper .contact-box .content .text-box .transparent-button {
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 2.3rem;
+    border: 3px solid #eee;
+    color: #eee;
+  }
+  .whyUs .wrapper .contact-box .content .contact-img {
+    position: relative;
+    width: 50%;
+    height: 200px;
+    background-image: url("../img/contact.jpg");
   }
 }
 @media (min-width: 1236px) {
