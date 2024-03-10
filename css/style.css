@@ -886,14 +886,45 @@ body {
 .achievements {
   position: relative;
   background-color: #DFDFDF;
+  overflow: hidden;
 }
 .achievements .wrapper .section-title .title {
+  color: #D18A48;
   text-align: center;
+  margin: 3em 0;
+  font-size: 3rem;
 }
 .achievements .wrapper .achievements-box {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  margin-bottom: 3em;
+}
+.achievements .wrapper .achievements-box .achievement {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+}
+.achievements .wrapper .achievements-box .achievement .fa-regular,
+.achievements .wrapper .achievements-box .achievement .fa-solid {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: #D18A48;
+}
+.achievements .wrapper .achievements-box .achievement .achievement-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.achievements .wrapper .achievements-box .achievement .achievement-text {
+  font-size: 1.8rem;
 }
 
 @media (min-width: 375px) {

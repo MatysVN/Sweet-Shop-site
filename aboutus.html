@@ -15,6 +15,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -76,7 +77,7 @@
                         <img src="./img/history1.jpg" alt="Kobieta w swoim biurze patrzy w okno">
                         <div class="img-border"></div>
                     </div>
-                    <div class="history-text text-one">
+                    <div class="history-text text-one" data-aos="zoom-in">
                         <div class="text">
                             <h1 class="title">Nasza historia</h1>
 
@@ -92,7 +93,7 @@
                         <div class="img-border border-reverse"></div>
                     </div>
 
-                    <div class="history-text text-two">
+                    <div class="history-text text-two" data-aos="zoom-in">
                         <div class="text">
                             <h1 class="title">Stawiamy na jakość!</h1>
                             <p>Nasza pasja do cukiernictwa jest naszą przysięgą, a każdego dnia wkładamy całe serce w
@@ -112,32 +113,31 @@
                     <h1 class="title">Czym możemy się pochwalić</h1>
                 </div>
                 <div class="achievements-box">
-                    <div class="achievement one">
-                        <i class="fa-regular">10</i>
+                    <div class="achievement one col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-left">
+                        <i class="fa-regular"><strong>10</strong></i>
                         <p class="achievement-title">Lat Doświadczenia</p>
                         <p class="achievement-text">Już od dekady rozwijamy nasza pasję</p>
                     </div>
-                    <div class="achievement two">
+                    <div class="achievement two col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-left" data-aos-delay="50">
                         <i class="fa-regular fa-comments"></i>
                         <p class="achievement-title">Indywidualne podejście</p>
                         <p class="achievement-text">Każdy klient jest dla nas wyjątkowy</p>
                     </div>
-                    <div class="achievement three">
+                    <div class="achievement three col-12 col-sm-6 col-md-4 col-lg-2" data-aos="fade-left" data-aos-delay="100">
                         <i class="fa-regular fa-handshake"></i>
                         <p class="achievement-title">Lokalne produkty</p>
                         <p class="achievement-text">Współpracujemy wyłącznie z lokalnymi dostawcami</p>
                     </div>
-                    <div class="achievement four">
+                    <div class="achievement four col-12 col-sm-6 col-md-6 col-lg-2" data-aos="fade-left" data-aos-delay="150">
                         <i class="fa-solid fa-graduation-cap"></i>
 
                         <p class="achievement-title">Szkolenia cukiernicze</p>
                         <p class="achievement-text">Regularnie poszerzamy naszą wiedzę i wprowadzamy innowacje</p>
                     </div>
-                    <div class="achievement five">
+                    <div class="achievement five col-12 col-sm-6 col-md-6 col-lg-2" data-aos="fade-left" data-aos-delay="200">
                         <i class="fa-solid fa-flask"></i>
-                        <p class="achievement-title">Eksperymentujemy</p>
-                        <p class="achievement-text">Rozwijamy sprawdzone przepisy, ale nie boimy się łączyć nowych
-                            smaków</p>
+                        <p class="achievement-title">Eksperymenty</p>
+                        <p class="achievement-text">Sprawdzone przepisy łączymy w niebanalny sposób</p>
                     </div>
                 </div>
             </div>
@@ -193,6 +193,9 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./js/aos.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/style.js"></script>
 
