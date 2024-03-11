@@ -2,7 +2,7 @@ AOS.init({
 	startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
 	offset: 200, // offset (in px) from the original trigger point
 	// Global settings:
-	once: false, // whether animation should happen only once - while scrolling down
+	once: true, // whether animation should happen only once - while scrolling down
 	disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 	initClassName: "aos-init", // class applied after initialization
 	animatedClassName: "aos-animate", // class applied on animation

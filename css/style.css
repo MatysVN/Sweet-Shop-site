@@ -1030,6 +1030,222 @@ body {
   background-size: cover;
 }
 
+.offert {
+  position: relative;
+  margin-bottom: 4em;
+  overflow: hidden;
+}
+.offert .offerts-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 0.5fr);
+  width: 100%;
+  height: 100%;
+  margin-top: 3em;
+}
+.offert .offerts-box .section-title {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  text-align: center;
+}
+.offert .offerts-box .section-title h1 {
+  font-size: 4rem;
+  color: #2e2e2e;
+}
+.offert .offerts-box .section-title .section-subtitle {
+  font-size: 2rem;
+  color: #676767;
+}
+.offert .offerts-box .product-one {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+}
+.offert .offerts-box .product-two {
+  grid-column: 1/5;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+}
+.offert .offerts-box .product-three {
+  grid-column: 1/5;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+}
+.offert .offerts-box .product-four {
+  grid-column: 1/5;
+  grid-row: 5/6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+}
+.offert .offerts-box .product-five {
+  grid-column: 1/5;
+  grid-row: 6/7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+}
+.offert .offerts-box .product-border {
+  margin: 20px;
+  border: 3px solid #D18A48;
+  border-radius: 15px;
+}
+.offert .offerts-box img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.offert .offerts-box .img-border {
+  display: none;
+  z-index: -1;
+}
+.offert .offerts-box .border-reverse {
+  transform: translate(15px, -15px);
+}
+.offert .offerts-box .product-img {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.offert .offerts-box .product-img img {
+  display: none;
+}
+.offert .offerts-box .img-one {
+  background-image: url("../img/vanilla-cake.jpg");
+}
+.offert .offerts-box .img-two {
+  background-image: url("../img/brownie-4020344_1920.jpg");
+}
+.offert .offerts-box .img-three {
+  background-image: url("../img/chocolate-pops.jpg");
+}
+.offert .offerts-box .img-four {
+  background-image: url("../img/donuts.jpg");
+}
+.offert .offerts-box .img-five {
+  background-image: url("../img/jam-428094_640.jpg");
+}
+.offert .offerts-box .product-text {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offert .offerts-box .text-box {
+  display: grid;
+  margin-bottom: 2em;
+  padding: 0 2em;
+}
+.offert .offerts-box .text-box .title {
+  position: relative;
+  padding: 1em 0 0.5em;
+  font-size: 3rem;
+  text-align: center;
+  color: #2e2e2e;
+}
+.offert .offerts-box .text-box .text {
+  text-align: center;
+  font-size: 2rem;
+}
+.offert .offerts-box .text-box .products-link {
+  font-size: 2.2rem;
+  text-decoration: none;
+  text-align: center;
+  color: #D18A48;
+}
+
+.catering {
+  position: relative;
+  background-image: url("../img/section-background.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.catering::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(28, 55%, 6%, 0.747);
+}
+.catering .wrapper-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 0.5fr);
+  padding: 3em 0;
+}
+.catering .wrapper-box .title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  padding-top: 30px;
+  font-size: 3rem;
+  text-align: center;
+  color: #eee;
+}
+.catering .wrapper-box .section-text {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2em 0em;
+  font-size: 2rem;
+  text-align: justify;
+  color: #eee;
+  z-index: 2;
+}
+.catering .wrapper-box .rate-box {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 0;
+  padding: 0 15px;
+  width: 60%;
+  border: 5px solid #eee;
+  background-color: hsla(29, 57%, 7%, 0.603);
+  text-align: center;
+  color: #eee;
+}
+.catering .wrapper-box .rate-box .rate-heading {
+  padding: 20px 20px 0px;
+  font-size: 3rem;
+}
+.catering .wrapper-box .rate-box .rate-text {
+  padding: 5px 10px;
+  font-size: 2rem;
+}
+.catering .wrapper-box .rate-box .transparent-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 3px solid #eee;
+  color: #eee;
+}
+
 @media (min-width: 375px) {
   .samples {
     height: 500px;
@@ -1458,6 +1674,109 @@ body {
     width: 50%;
     height: 200px;
     background-image: url("../img/contact.jpg");
+  }
+  .offert {
+    margin-bottom: 6em;
+  }
+  .offert .offerts-box .product-one {
+    grid-template-rows: 1fr;
+  }
+  .offert .offerts-box .product-two {
+    grid-template-rows: 1fr;
+  }
+  .offert .offerts-box .product-three {
+    grid-template-rows: 1fr;
+  }
+  .offert .offerts-box .product-four {
+    grid-template-rows: 1fr;
+  }
+  .offert .offerts-box .product-five {
+    grid-template-rows: 1fr;
+  }
+  .offert .offerts-box .product-border {
+    border: 0px solid transparent;
+  }
+  .offert .offerts-box .img-border {
+    display: block;
+    transform: translate(15px, 15px);
+  }
+  .offert .offerts-box .product-img {
+    width: 80%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .offert .offerts-box .img-one {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url("../img/vanilla-cake.jpg");
+  }
+  .offert .offerts-box .img-two {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: url("../img/brownie-4020344_1920.jpg");
+  }
+  .offert .offerts-box .img-three {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url("../img/chocolate-pops.jpg");
+  }
+  .offert .offerts-box .img-four {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: url("../img/donuts.jpg");
+  }
+  .offert .offerts-box .img-five {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url("../img/jam-428094_640.jpg");
+  }
+  .offert .offerts-box .text-box .title {
+    font-size: 4rem;
+  }
+  .offert .offerts-box .text-box .text {
+    font-size: 2.5rem;
+  }
+  .offert .offerts-box .text-box .products-link {
+    font-size: 2.7rem;
+  }
+  .offert .offerts-box .text-one,
+  .offert .offerts-box .text-three,
+  .offert .offerts-box .text-five {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+  .offert .offerts-box .text-two,
+  .offert .offerts-box .text-four {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .catering .wrapper-box {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    padding-top: 3em;
+    padding-bottom: 5em;
+  }
+  .catering .wrapper-box .title {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    font-size: 4rem;
+  }
+  .catering .wrapper-box .section-text {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: 0 0 0 2em;
+  }
+  .catering .wrapper-box .rate-box {
+    grid-column: 4/6;
+    grid-row: 2/3;
+    width: 80%;
+  }
+  .catering .wrapper-box .rate-box .rate-heading {
+    margin-bottom: 0;
+  }
+  .catering .wrapper-box .rate-box .transparent-button {
+    margin-top: 0px;
+    font-size: 2rem;
   }
 }
 @media (min-width: 992px) {

@@ -927,6 +927,236 @@ body {
 	}
 }
 
+// ---
+// OFFERT > offert
+///
+.offert {
+	position: relative;
+	margin-bottom: 4em;
+	overflow: hidden;
+
+	.offerts-box {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(6, 0.5fr);
+		width: 100%;
+		height: 100%;
+		margin-top: 3em;
+
+		.section-title {
+			grid-column: 1/5;
+			grid-row: 1/2;
+			text-align: center;
+			h1 {
+				font-size: 4rem;
+				color: $dark;
+			}
+			.section-subtitle {
+				font-size: 2rem;
+				color: $grey;
+			}
+		}
+
+		.product-one {
+			grid-column: 1/5;
+			grid-row: 2/3;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 0.5fr);
+		}
+		.product-two {
+			grid-column: 1/5;
+			grid-row: 3/4;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 0.5fr);
+		}
+		.product-three {
+			grid-column: 1/5;
+			grid-row: 4/5;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 0.5fr);
+		}
+		.product-four {
+			grid-column: 1/5;
+			grid-row: 5/6;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 0.5fr);
+		}
+		.product-five {
+			grid-column: 1/5;
+			grid-row: 6/7;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 0.5fr);
+		}
+
+		.product-border {
+			margin: 20px;
+			border: 3px solid $main-color;
+			border-radius: 15px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+		.img-border {
+			display: none;
+			z-index: -1;
+		}
+		.border-reverse {
+			transform: translate(15px, -15px);
+		}
+		.product-img {
+			grid-column: 1/5;
+			grid-row: 1/2;
+			position: relative;
+			width: 100%;
+			height: 300px;
+			margin: 0 auto;
+			background-size: cover;
+			border-top-right-radius: 15px;
+			border-top-left-radius: 15px;
+		}
+		.product-img img {
+			display: none;
+		}
+		.img-one {
+			background-image: url("../img/vanilla-cake.jpg");
+		}
+		.img-two {
+			background-image: url("../img/brownie-4020344_1920.jpg");
+		}
+		.img-three {
+			background-image: url("../img/chocolate-pops.jpg");
+		}
+		.img-four {
+			background-image: url("../img/donuts.jpg");
+		}
+		.img-five {
+			background-image: url("../img/jam-428094_640.jpg");
+		}
+
+		.product-text {
+			grid-column: 1/5;
+			grid-row: 2/3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.text-box {
+			display: grid;
+			margin-bottom: 2em;
+			padding: 0 2em;
+			.title {
+				position: relative;
+				padding: 1em 0 0.5em;
+				font-size: 3rem;
+				text-align: center;
+				color: $dark;
+			}
+			.text {
+				text-align: center;
+				font-size: 2rem;
+			}
+			.products-link {
+				font-size: 2.2rem;
+				text-decoration: none;
+				text-align: center;
+				color: $main-color;
+			}
+		}
+	}
+}
+
+// ---
+// OFFERT > Catering
+///
+
+.catering {
+	position: relative;
+	background-image: url("../img/section-background.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: $section-img-shadow;
+	}
+	.wrapper-box {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, .5fr);
+		padding: 3em 0;
+
+		.title {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 30px;
+			padding-top: 30px;
+			font-size: 3rem;
+			text-align: center;
+			color: $light-white;
+		}
+		.section-text {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 2em 0em;
+			font-size: 2rem;
+			text-align: justify;
+			color: $light-white;
+			z-index: 2;
+		}
+		.rate-box {
+			grid-column: 1/2;
+			grid-row: 3/4;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin: 30px auto 0;
+			padding: 0 15px;
+			width: 60%;
+			border: 5px solid $light-white;
+			background-color: $header-shadow;
+			text-align: center;
+			color: $light-white;
+			.rate-heading {
+				padding: 20px 20px 0px;
+				font-size: 3rem;
+			}
+			.rate-text {
+				padding: 5px 10px;
+				font-size: 2rem;
+			}
+			.transparent-button {
+				cursor: pointer;
+				padding: 10px 20px;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				border: 3px solid $light-white;
+				color: $light-white;
+			}
+		}
+	}
+}
+
 //Breakpoints
 
 @media (min-width: 375px) {
@@ -1440,6 +1670,118 @@ body {
 						height: 200px;
 						background-image: url("../img/contact.jpg");
 					}
+				}
+			}
+		}
+	}
+	.offert {
+		margin-bottom: 6em;
+
+		.offerts-box {
+			.product-one {
+				grid-template-rows: 1fr;
+			}
+			.product-two {
+				grid-template-rows: 1fr;
+			}
+			.product-three {
+				grid-template-rows: 1fr;
+			}
+			.product-four {
+				grid-template-rows: 1fr;
+			}
+			.product-five {
+				grid-template-rows: 1fr;
+			}
+
+			.product-border {
+				border: 0px solid transparent;
+			}
+			.img-border {
+				display: block;
+				transform: translate(15px, 15px);
+			}
+			.product-img {
+				width: 80%;
+				border-top-right-radius: 0px;
+				border-top-left-radius: 0px;
+			}
+			.img-one {
+				grid-column: 1/3;
+				grid-row: 1/2;
+				background-image: url("../img/vanilla-cake.jpg");
+			}
+			.img-two {
+				grid-column: 3/5;
+				grid-row: 1/2;
+				background-image: url("../img/brownie-4020344_1920.jpg");
+			}
+			.img-three {
+				grid-column: 1/3;
+				grid-row: 1/2;
+				background-image: url("../img/chocolate-pops.jpg");
+			}
+			.img-four {
+				grid-column: 3/5;
+				grid-row: 1/2;
+				background-image: url("../img/donuts.jpg");
+			}
+			.img-five {
+				grid-column: 1/3;
+				grid-row: 1/2;
+				background-image: url("../img/jam-428094_640.jpg");
+			}
+			.text-box {
+				.title {
+					font-size: 4rem;
+				}
+				.text {
+					font-size: 2.5rem;
+				}
+				.products-link {
+					font-size: 2.7rem;
+				}
+			}
+			.text-one,
+			.text-three,
+			.text-five {
+				grid-column: 3/5;
+				grid-row: 1/2;
+			}
+			.text-two,
+			.text-four {
+				grid-column: 1/3;
+				grid-row: 1/2;
+			}
+		}
+	}
+	.catering {
+		.wrapper-box {
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(2, .5fr);
+			padding-top: 3em;
+			padding-bottom: 5em;
+	
+			.title {
+				grid-column: 1/6;
+				grid-row: 1/2;
+				font-size: 4rem;
+			}
+			.section-text {
+				grid-column: 1/4;
+				grid-row: 2/3;
+				margin: 0 0 0 2em;
+			}
+			.rate-box {
+				grid-column: 4/6;
+				grid-row: 2/3;
+				width: 80%;
+				.rate-heading {
+					margin-bottom: 0;
+				}
+				.transparent-button {
+					margin-top: 0px;
+					font-size: 2rem;
 				}
 			}
 		}
