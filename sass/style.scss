@@ -1094,7 +1094,7 @@ body {
 	.wrapper-box {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, .5fr);
+		grid-template-rows: repeat(3, 0.5fr);
 		padding: 3em 0;
 
 		.title {
@@ -1160,7 +1160,108 @@ body {
 // ---
 // Product
 ///
-
+.products {
+	background-color: $section-darker-color;
+	.wrapper {
+		.products-box {
+			
+			.breadcrumb {
+				padding: 2em;
+				color: $grey;
+				a {
+					text-decoration: none;
+					color: $grey;
+					transition: color .2s;
+				}
+				a:hover {
+					color: $main-color;
+				}
+			}
+			.section-title {
+				margin-left: 1em;
+				margin-bottom: 1em;
+				font-size: 4rem;
+				color: $dark;
+			}
+			.section-content {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				cursor: pointer;
+				padding-bottom: 4em;
+				.product-box {
+					width: 90%;
+					margin: 1em;
+					text-decoration: none;
+					border: 3px solid $main-color;
+					border-radius: 15px;
+					.product-img {
+						position: relative;
+						width: 100%;
+						height: 300px;
+						background-size: cover;
+						background-position: center;
+						border-top-left-radius: 15px;
+						border-top-right-radius: 15px;
+					}
+					.product-text {
+						padding: 20px;
+						border-bottom-left-radius: 15px;
+						border-bottom-right-radius: 15px;
+						background-color: $light-white;
+						text-align: center;
+						.product-name {
+							font-size: 2rem;
+							font-weight: bold;
+							color: $dark;
+						}
+						.product-price {
+							font-size: 1.8rem;
+							color: $grey;
+						}
+					}
+					.img-one {
+						background-image: url("../img/Products/pexels-jeremy-wong-1038711.jpg");
+					}
+					.img-two {
+						background-image: url("../img/Products/pexels-dalila-dalprat-1889651.jpg");
+					}
+					.img-three {
+						background-image: url("../img/Products/pexels-jusper-mwangi-2510104.jpg");
+					}
+					.img-four {
+						background-image: url("../img/Products/pexels-jasmine-lew-140831.jpg");
+					}
+					.img-five {
+						background-image: url("../img/Products/pexels-jess-bailey-designs-853004.jpg");
+					}
+					.img-six {
+						background-image: url("../img/Products/pexels-jess-bailey-designs-913136.jpg");
+					}
+					.img-seven {
+						background-image: url("../img/Products/pexels-dmitry-zvolskiy-1721934.jpg");
+					}
+					.img-eight {
+						background-image: url("../img/Products/pexels-vojtech-okenka-1055272.jpg");
+					}
+					.img-nine {
+						background-image: url("../img/Products/pexels-brent-keane-1702373.jpg");
+					}
+					.img-ten {
+						background-image: url("../img/Products/pexels-abhinav-goswami-291528.jpg");
+					}
+					.img-eleven {
+						background-image: url("../img/chocolate-pops.jpg");
+					}
+					.img-twelve {
+						background-image: url("../img/brownie-4020344_1920.jpg");
+					}
+				}
+			}
+		}
+	}
+}
 
 //Breakpoints
 
@@ -1763,15 +1864,14 @@ body {
 	.catering {
 		.wrapper-box {
 			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: repeat(2, .5fr);
+			grid-template-rows: repeat(2, 0.5fr);
 			padding-top: 3em;
 			padding-bottom: 5em;
-	
+
 			.title {
 				grid-column: 1/6;
 				grid-row: 1/2;
 				font-size: 4rem;
-
 			}
 			.section-text {
 				grid-column: 1/4;
@@ -1788,6 +1888,31 @@ body {
 				.transparent-button {
 					margin-top: 0px;
 					font-size: 2rem;
+				}
+			}
+		}
+	}
+	.products {
+		.wrapper {
+			.products-box {
+				.section-content {
+					justify-content: space-between;
+					flex-direction: row;
+					flex-wrap: wrap;
+					margin: 0 2em 0em;
+					.product-box {
+						width: 30%;
+						margin: 0.5em;
+
+						.product-text {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							height: 100px;
+							padding: 10px;
+						}
+					}
 				}
 			}
 		}
@@ -2017,6 +2142,21 @@ body {
 						width: 50%;
 						height: 200px;
 						background-image: url("../img/contact.jpg");
+					}
+				}
+			}
+		}
+	}
+	.products {
+		.wrapper {
+			.products-box {
+				.section-content {
+					.product-box {
+						width: 23%;
+						margin: 0.5em;
+						.product-img {
+							height: 200px;
+						}
 					}
 				}
 			}

@@ -1246,6 +1246,104 @@ body {
   color: #eee;
 }
 
+.products {
+  background-color: #f1ebe3;
+}
+.products .wrapper .products-box .breadcrumb {
+  padding: 2em;
+  color: #676767;
+}
+.products .wrapper .products-box .breadcrumb a {
+  text-decoration: none;
+  color: #676767;
+  transition: color 0.2s;
+}
+.products .wrapper .products-box .breadcrumb a:hover {
+  color: #D18A48;
+}
+.products .wrapper .products-box .section-title {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  font-size: 4rem;
+  color: #2e2e2e;
+}
+.products .wrapper .products-box .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  padding-bottom: 4em;
+}
+.products .wrapper .products-box .section-content .product-box {
+  width: 90%;
+  margin: 1em;
+  text-decoration: none;
+  border: 3px solid #D18A48;
+  border-radius: 15px;
+}
+.products .wrapper .products-box .section-content .product-box .product-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.products .wrapper .products-box .section-content .product-box .product-text {
+  padding: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #eee;
+  text-align: center;
+}
+.products .wrapper .products-box .section-content .product-box .product-text .product-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+.products .wrapper .products-box .section-content .product-box .product-text .product-price {
+  font-size: 1.8rem;
+  color: #676767;
+}
+.products .wrapper .products-box .section-content .product-box .img-one {
+  background-image: url("../img/Products/pexels-jeremy-wong-1038711.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-two {
+  background-image: url("../img/Products/pexels-dalila-dalprat-1889651.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-three {
+  background-image: url("../img/Products/pexels-jusper-mwangi-2510104.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-four {
+  background-image: url("../img/Products/pexels-jasmine-lew-140831.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-five {
+  background-image: url("../img/Products/pexels-jess-bailey-designs-853004.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-six {
+  background-image: url("../img/Products/pexels-jess-bailey-designs-913136.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-seven {
+  background-image: url("../img/Products/pexels-dmitry-zvolskiy-1721934.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-eight {
+  background-image: url("../img/Products/pexels-vojtech-okenka-1055272.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-nine {
+  background-image: url("../img/Products/pexels-brent-keane-1702373.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-ten {
+  background-image: url("../img/Products/pexels-abhinav-goswami-291528.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-eleven {
+  background-image: url("../img/chocolate-pops.jpg");
+}
+.products .wrapper .products-box .section-content .product-box .img-twelve {
+  background-image: url("../img/brownie-4020344_1920.jpg");
+}
+
 @media (min-width: 375px) {
   .samples {
     height: 500px;
@@ -1778,6 +1876,24 @@ body {
     margin-top: 0px;
     font-size: 2rem;
   }
+  .products .wrapper .products-box .section-content {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 2em 0em;
+  }
+  .products .wrapper .products-box .section-content .product-box {
+    width: 30%;
+    margin: 0.5em;
+  }
+  .products .wrapper .products-box .section-content .product-box .product-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 10px;
+  }
 }
 @media (min-width: 992px) {
   .header .header__text-box .title {
@@ -1977,6 +2093,13 @@ body {
     width: 50%;
     height: 200px;
     background-image: url("../img/contact.jpg");
+  }
+  .products .wrapper .products-box .section-content .product-box {
+    width: 23%;
+    margin: 0.5em;
+  }
+  .products .wrapper .products-box .section-content .product-box .product-img {
+    height: 200px;
   }
 }
 @media (min-width: 1236px) {
