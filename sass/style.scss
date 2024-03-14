@@ -1164,14 +1164,13 @@ body {
 	background-color: $section-darker-color;
 	.wrapper {
 		.products-box {
-			
 			.breadcrumb {
 				padding: 2em;
 				color: $grey;
 				a {
 					text-decoration: none;
 					color: $grey;
-					transition: color .2s;
+					transition: color 0.2s;
 				}
 				a:hover {
 					color: $main-color;
@@ -1260,6 +1259,208 @@ body {
 				}
 			}
 		}
+	}
+}
+
+// ---
+// PRODUCT SAMPLE > Sample
+///
+.sample {
+	margin-bottom: 5em;
+	.wrapper {
+		.breadcrumb {
+			padding: 32px 32px 32px;
+			a {
+				text-decoration: none;
+				color: $dark;
+				transition: color 0.3s;
+			}
+			a:hover {
+				color: $main-color;
+			}
+			.active {
+				color: $dark;
+			}
+		}
+		.product-img {
+			width: 90%;
+			height: 400px;
+			margin: 0 auto;
+			background-image: url("../img/cake-3864142_640.jpg");
+			background-position: center;
+			background-size: cover;
+		}
+		.product-box {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin: 10px auto;
+			overflow: hidden;
+			.product-text-box {
+				margin-bottom: 20px;
+				.title {
+					font-size: 3rem;
+					padding: 10px 0;
+				}
+				.text {
+					border-top: 3px solid $main-color;
+					.price {
+						padding: 10px 0;
+						font-size: 2.5rem;
+						color: $main-color;
+					}
+					.description {
+						font-size: 2rem;
+					}
+				}
+			}
+			.product-order-box {
+				padding: 20px;
+				background-color: $section-color;
+				border-right: 3px solid $main-color;
+				.title {
+					text-align: center;
+					font-size: 2.5rem;
+					color: $dark;
+				}
+				.text {
+					padding-top: 10px;
+					font-size: 2rem;
+					text-align: left;
+					color: $grey;
+				}
+				.dropdown {
+					padding: 10px 0;
+					button {
+						width: 100%;
+						font-size: 2rem;
+						text-align: justify;
+						background-color: $button-color;
+						color: $grey;
+					}
+					button::after {
+						position: absolute;
+						right: 0;
+						top: 55%;
+						transform: translateY(-50%);
+						scale: 1.5;
+						margin-right: 10px;
+					}
+					.dropdown-menu {
+						padding: 0;
+					}
+					.dropdown-item {
+						background-color: $button-color;
+						color: $grey;
+						font-size: 2rem;
+						transition: color 0.2s;
+					}
+					.dropdown-item:hover {
+						color: $main-color;
+					}
+				}
+				.counter {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					button {
+						padding: 10px 20px;
+						font-size: 3rem;
+						background-color: rgba($color: #000000, $alpha: 0);
+						cursor: pointer;
+						color: $grey;
+					}
+					#value {
+						margin: 0 10px;
+						font-size: 2.5rem;
+						color: $dark;
+					}
+				}
+				.transparent-button {
+					margin: 15px 0;
+					font-size: 2rem;
+					width: 100%;
+				}
+				.transparent-button::before {
+					display: none;
+					content: "Przykro mi! Jeszcze tego nie zaprogramowałem...";
+					position: absolute;
+					left: 62%;
+					width: 41%;
+					padding: 0.5em 1em;
+					border-radius: 10px;
+					background-color: $section-darker-color;
+					color: $main-color;
+					border: 3px solid $main-color;
+					font-size: 2rem;
+					transform: translateX(-50%);
+				}
+				.transparent-button:hover::before {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+// ---
+// PRODUCT SAMPLE > Shipment
+///
+.shipment {
+	background-color: $section-color;
+	overflow: hidden;
+	.shipment-box {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.5 fr repeat(2, 1fr);
+		padding: 60px 0;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.shipment-element {
+		display: flex;
+		width: 100%;
+		padding: 30px 30px;
+
+		.fa-solid {
+			width: 15%;
+			font-size: 6rem;
+			color: $main-color;
+		}
+		.text-box {
+			margin-left: 40px;
+			width: 85%;
+			.title {
+				font-size: 2.2rem;
+			}
+			.content {
+				font-size: 1.8rem;
+				span {
+					font-weight: bold;
+				}
+				a {
+					font-weight: bold;
+					text-decoration: none;
+					color: $main-color;
+				}
+			}
+		}
+	}
+	.one {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		border-bottom: 3px solid $main-color;
+	}
+	.two {
+		grid-column: 1/2;
+		grid-row: 2/3;
+		border-bottom: 3px solid $main-color;
+	}
+	.three {
+		grid-column: 1/2;
+		grid-row: 3/4;
 	}
 }
 
@@ -1915,6 +2116,74 @@ body {
 					}
 				}
 			}
+		}
+	}
+	.sample {
+		.wrapper {
+			.breadcrumb {
+				margin-top: 66px;
+			}
+			.product-img {
+				background-image: url("../img/cake-3864142_1920.jpg");
+			}
+			.product-box {
+				flex-direction: row;
+				.product-text-box {
+					width: 55%;
+					margin-bottom: 0px;
+					margin-right: 20px;
+				}
+				.product-order-box {
+					transform: translateY(60px);
+					width: 45%;
+					min-height: 380px;
+					.counter {
+						display: inline-flex;
+						width: 30%;
+						button {
+							padding: 5px 10px;
+						}
+					}
+					.transparent-button {
+						width: 68%;
+					}
+					.transparent-button::before {
+						bottom: 150px;
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	.shipment {
+		.shipment-box {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+		}
+		.shipment-element {
+			padding: 30px 5px;
+
+			.fa-solid {
+				width: 18%;
+				font-size: 5rem;
+			}
+			.text-box {
+				margin-left: 15px;
+				.title {
+				}
+			}
+		}
+		.one {
+			border-bottom: 0px solid $main-color;
+		}
+		.two {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			border-bottom: 0px solid $main-color;
+		}
+		.three {
+			grid-column: 3/4;
+			grid-row: 1/2;
 		}
 	}
 }

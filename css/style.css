@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -1344,6 +1345,198 @@ body {
   background-image: url("../img/brownie-4020344_1920.jpg");
 }
 
+.sample {
+  margin-bottom: 5em;
+}
+.sample .wrapper .breadcrumb {
+  padding: 32px 32px 32px;
+}
+.sample .wrapper .breadcrumb a {
+  text-decoration: none;
+  color: #2e2e2e;
+  transition: color 0.3s;
+}
+.sample .wrapper .breadcrumb a:hover {
+  color: #D18A48;
+}
+.sample .wrapper .breadcrumb .active {
+  color: #2e2e2e;
+}
+.sample .wrapper .product-img {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  background-image: url("../img/cake-3864142_640.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.sample .wrapper .product-box {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.sample .wrapper .product-box .product-text-box {
+  margin-bottom: 20px;
+}
+.sample .wrapper .product-box .product-text-box .title {
+  font-size: 3rem;
+  padding: 10px 0;
+}
+.sample .wrapper .product-box .product-text-box .text {
+  border-top: 3px solid #D18A48;
+}
+.sample .wrapper .product-box .product-text-box .text .price {
+  padding: 10px 0;
+  font-size: 2.5rem;
+  color: #D18A48;
+}
+.sample .wrapper .product-box .product-text-box .text .description {
+  font-size: 2rem;
+}
+.sample .wrapper .product-box .product-order-box {
+  padding: 20px;
+  background-color: #DFDFDF;
+  border-right: 3px solid #D18A48;
+}
+.sample .wrapper .product-box .product-order-box .title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2e2e2e;
+}
+.sample .wrapper .product-box .product-order-box .text {
+  padding-top: 10px;
+  font-size: 2rem;
+  text-align: left;
+  color: #676767;
+}
+.sample .wrapper .product-box .product-order-box .dropdown {
+  padding: 10px 0;
+}
+.sample .wrapper .product-box .product-order-box .dropdown button {
+  width: 100%;
+  font-size: 2rem;
+  text-align: justify;
+  background-color: #CCCCCC;
+  color: #676767;
+}
+.sample .wrapper .product-box .product-order-box .dropdown button::after {
+  position: absolute;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  scale: 1.5;
+  margin-right: 10px;
+}
+.sample .wrapper .product-box .product-order-box .dropdown .dropdown-menu {
+  padding: 0;
+}
+.sample .wrapper .product-box .product-order-box .dropdown .dropdown-item {
+  background-color: #CCCCCC;
+  color: #676767;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+.sample .wrapper .product-box .product-order-box .dropdown .dropdown-item:hover {
+  color: #D18A48;
+}
+.sample .wrapper .product-box .product-order-box .counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.sample .wrapper .product-box .product-order-box .counter button {
+  padding: 10px 20px;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: #676767;
+}
+.sample .wrapper .product-box .product-order-box .counter #value {
+  margin: 0 10px;
+  font-size: 2.5rem;
+  color: #2e2e2e;
+}
+.sample .wrapper .product-box .product-order-box .transparent-button {
+  margin: 15px 0;
+  font-size: 2rem;
+  width: 100%;
+}
+.sample .wrapper .product-box .product-order-box .transparent-button::before {
+  display: none;
+  content: "Przykro mi! Jeszcze tego nie zaprogramowałem...";
+  position: absolute;
+  left: 62%;
+  width: 41%;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: #f1ebe3;
+  color: #D18A48;
+  border: 3px solid #D18A48;
+  font-size: 2rem;
+  transform: translateX(-50%);
+}
+.sample .wrapper .product-box .product-order-box .transparent-button:hover::before {
+  display: block;
+}
+
+.shipment {
+  background-color: #DFDFDF;
+  overflow: hidden;
+}
+.shipment .shipment-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5 fr repeat(2, 1fr);
+  padding: 60px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.shipment .shipment-element {
+  display: flex;
+  width: 100%;
+  padding: 30px 30px;
+}
+.shipment .shipment-element .fa-solid {
+  width: 15%;
+  font-size: 6rem;
+  color: #D18A48;
+}
+.shipment .shipment-element .text-box {
+  margin-left: 40px;
+  width: 85%;
+}
+.shipment .shipment-element .text-box .title {
+  font-size: 2.2rem;
+}
+.shipment .shipment-element .text-box .content {
+  font-size: 1.8rem;
+}
+.shipment .shipment-element .text-box .content span {
+  font-weight: bold;
+}
+.shipment .shipment-element .text-box .content a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #D18A48;
+}
+.shipment .one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-bottom: 3px solid #D18A48;
+}
+.shipment .two {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-bottom: 3px solid #D18A48;
+}
+.shipment .three {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
 @media (min-width: 375px) {
   .samples {
     height: 500px;
@@ -1893,6 +2086,65 @@ body {
     justify-content: center;
     height: 100px;
     padding: 10px;
+  }
+  .sample .wrapper .breadcrumb {
+    margin-top: 66px;
+  }
+  .sample .wrapper .product-img {
+    background-image: url("../img/cake-3864142_1920.jpg");
+  }
+  .sample .wrapper .product-box {
+    flex-direction: row;
+  }
+  .sample .wrapper .product-box .product-text-box {
+    width: 55%;
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+  .sample .wrapper .product-box .product-order-box {
+    transform: translateY(60px);
+    width: 45%;
+    min-height: 380px;
+  }
+  .sample .wrapper .product-box .product-order-box .counter {
+    display: inline-flex;
+    width: 30%;
+  }
+  .sample .wrapper .product-box .product-order-box .counter button {
+    padding: 5px 10px;
+  }
+  .sample .wrapper .product-box .product-order-box .transparent-button {
+    width: 68%;
+  }
+  .sample .wrapper .product-box .product-order-box .transparent-button::before {
+    bottom: 150px;
+    width: 60%;
+  }
+  .shipment .shipment-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .shipment .shipment-element {
+    padding: 30px 5px;
+  }
+  .shipment .shipment-element .fa-solid {
+    width: 18%;
+    font-size: 5rem;
+  }
+  .shipment .shipment-element .text-box {
+    margin-left: 15px;
+  }
+  .shipment .one {
+    border-bottom: 0px solid #D18A48;
+  }
+  .shipment .two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-bottom: 0px solid #D18A48;
+  }
+  .shipment .three {
+    grid-column: 3/4;
+    grid-row: 1/2;
   }
 }
 @media (min-width: 992px) {
