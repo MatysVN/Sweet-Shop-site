@@ -1693,6 +1693,26 @@ body {
   border: 3px solid #eee;
 }
 
+.informations .wrapper .informations-box {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.informations .wrapper .informations-box .title {
+  margin-top: 50px;
+  font-size: 3rem;
+  color: #D18A48;
+}
+.informations .wrapper .informations-box .subtitle {
+  padding: 30px;
+}
+.informations .wrapper .informations-box .text {
+  text-align: left;
+}
+.informations .wrapper .informations-box .text span {
+  font-weight: bold;
+}
+
 @media (min-width: 375px) {
   .samples {
     height: 500px;

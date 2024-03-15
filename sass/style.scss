@@ -1632,6 +1632,32 @@ body {
 	}
 }
 
+///
+/// Informations
+///
+.informations {
+	.wrapper {
+		.informations-box {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			.title {
+				margin-top: 50px;
+				font-size: 3rem;
+				color: $main-color;
+			}
+			.subtitle {
+				padding: 30px;
+			}
+			.text {
+				text-align: left;
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
 
 //Breakpoints
 
