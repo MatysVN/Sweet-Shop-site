@@ -89,13 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  
-	dropdownItems.forEach(item => {
-	  item.addEventListener('click', function() {
-		const priceText = this.getAttribute('data-price');
-		priceElement.textContent = priceText;
-	  });
+document.addEventListener("DOMContentLoaded", function () {
+	dropdownItems.forEach((item) => {
+		item.addEventListener("click", function () {
+			const priceText = this.getAttribute("data-price");
+			priceElement.textContent = priceText;
+		});
 	});
-  });
+});
